@@ -1,5 +1,5 @@
 ---
-title: "Entry 001 — Concept, Design Decisions, and the Software Stack"
+title: "Concept, Design Decisions, and the Software Stack"
 date: 2026-05-15
 tags: ["design", "ROS2", "VESC", "OAK-D", "hoverboard"]
 summary: "The origin of E-Yor, the hardware and software architecture decisions, and why I'm building a prototype called RoBug before committing to the full build."
