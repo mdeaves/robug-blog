@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Body -->
+  <ellipse cx="50" cy="55" rx="22" ry="28" fill="#2d5a27"/>
+  <!-- Head -->
+  <ellipse cx="50" cy="27" rx="13" ry="11" fill="#2d5a27"/>
+  <!-- Wing divide line -->
+  <line x1="50" y1="30" x2="50" y2="82" stroke="#1a3a16" stroke-width="2"/>
+  <!-- Wing pattern dots -->
+  <circle cx="42" cy="48" r="3" fill="#1a3a16"/>
+  <circle cx="58" cy="48" r="3" fill="#1a3a16"/>
+  <circle cx="41" cy="62" r="2.5" fill="#1a3a16"/>
+  <circle cx="59" cy="62" r="2.5" fill="#1a3a16"/>
+  <!-- Eyes -->
+  <circle cx="44" cy="24" r="3" fill="#fff"/>
+  <circle cx="56" cy="24" r="3" fill="#fff"/>
+  <circle cx="44" cy="24" r="1.5" fill="#111"/>
+  <circle cx="56" cy="24" r="1.5" fill="#111"/>
+  <!-- Antennae -->
+  <line x1="44" y1="17" x2="34" y2="5" stroke="#2d5a27" stroke-width="2" stroke-linecap="round"/>
+  <line x1="56" y1="17" x2="66" y2="5" stroke="#2d5a27" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="34" cy="5" r="2.5" fill="#2d5a27"/>
+  <circle cx="66" cy="5" r="2.5" fill="#2d5a27"/>
+  <!-- Legs left -->
+  <line x1="30" y1="48" x2="12" y2="42" stroke="#2d5a27" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="29" y1="58" x2="10" y2="57" stroke="#2d5a27" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="31" y1="68" x2="14" y2="75" stroke="#2d5a27" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Legs right -->
+  <line x1="70" y1="48" x2="88" y2="42" stroke="#2d5a27" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="71" y1="58" x2="90" y2="57" stroke="#2d5a27" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="69" y1="68" x2="86" y2="75" stroke="#2d5a27" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
