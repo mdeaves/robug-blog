@@ -1,12 +1,16 @@
 ---
-title: "About RoBug"
+title: "About E-Yor"
 date: 2026-05-15
 layout: "single"
 ---
 
-## What is RoBug?
+## What is E-Yor?
 
-RoBug is a smart 4WD electric utility carrier I'm building for our rural homestead in Ontario. It's designed to haul heavy loads across rough terrain — stumps, firewood, tools, sheet goods — and eventually follow me around the property autonomously, carrying whatever I'm working with. I will use it to plow snow, Zamboni the ice on our pond, power tools when I'm away from the house, and pull the kids on their toboggans.
+E-Yor is a smart 4WD electric utility carrier I'm building for our rural homestead in Ontario. It's designed to haul heavy loads across rough terrain — stumps, firewood, tools, sheet goods — and eventually follow me around the property autonomously, carrying whatever I'm working with. I will use it to plow snow, Zamboni the ice on our pond, power tools when I'm away from the house, and pull the kids on their toboggans.
+
+## The name
+
+Eeyore was the loveable, slow, dependable donkey from Winnie the Pooh — and donkeys have carried heavy loads for humans for thousands of years. It seemed like the perfect spirit animal for a big, slow, load-bearing robot. The "E" stands for electric. E-Yor.
 
 ## Why build it?
 
@@ -26,9 +30,9 @@ Commercial utility carriers exist, but nothing quite hits the combination of pri
 - **Max Speed:** 10–15 km/h
 - **Overall Dimensions:** 100cm × 89cm (fits in the back of a Model Y)
 
-## The prototype first
+## The prototype: RoBug
 
-Before committing to the full build, I'm building a small prototype using salvaged hoverboard motors, two VESC controllers, a Raspberry Pi, and an OAK-D Lite. Same software stack, smaller scale.
+Before committing to the full E-Yor build, I'm building a small prototype using salvaged hoverboard motors, two VESC controllers, a Raspberry Pi, and an OAK-D Lite. Same software stack, smaller scale. The prototype is called RoBug — because when my daughter first learned what a robot was, that's what she called them. The name stuck.
 
 ## About me
 

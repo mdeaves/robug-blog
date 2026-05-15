@@ -2,18 +2,22 @@
 title: "Entry 001 — Concept, Design Decisions, and the Software Stack"
 date: 2026-05-15
 tags: ["design", "ROS2", "VESC", "OAK-D", "hoverboard"]
-summary: "The origin of RoBug, the hardware and software architecture decisions, and why I'm building a prototype with hoverboard motors before committing to the full build."
+summary: "The origin of E-Yor, the hardware and software architecture decisions, and why I'm building a prototype called RoBug before committing to the full build."
 ---
 
 ## How it started
 
 It started with a stump problem. We have a rural property in Ontario with more stumps than I'd like, uneven terrain, and a lot of heavy hauling to do. I wanted something that could carry 200–250 kg of payload across rough ground, pull stumps with a winch, and not cost $20,000.
 
-Then my six-year-old son Charlie said it should be able to talk. That got me thinking about what else it could do — telemetry streaming, autonomous follow-me, obstacle detection. One thing led to another.
+Then my son Charlie said it should be able to talk. That got me thinking about what else it could do — telemetry streaming, autonomous follow-me, obstacle detection. One thing led to another.
 
-## The name
+## The name: E-Yor
 
-Charlie named it RoBug. It stuck.
+Eeyore was the loveable, slow, dependable donkey from Winnie the Pooh — and donkeys have carried heavy loads for humans for thousands of years. It seemed like the perfect spirit animal for a big, slow, load-bearing robot. The "E" stands for electric. E-Yor.
+
+## The prototype: RoBug
+
+Before committing to the full E-Yor build I'm building a smaller prototype — same software stack, smaller scale — to validate the architecture. The prototype is called RoBug, because when my daughter first learned what a robot was, that's what she called them. The name stuck.
 
 ## Core hardware decisions
 
@@ -23,7 +27,7 @@ After looking at QS138 motors with chain drive, I settled on purpose-built wheel
 
 The advantages are significant: no chain, no sprockets, no alignment headaches. Each motor is a complete wheel assembly. Mount the frame, bolt the motors, done.
 
-Rated for 800 kg load capacity per motor. RoBug's all-up loaded weight is around 450 kg. Plenty of margin.
+Rated for 800 kg load capacity per motor. E-Yor's all-up loaded weight is around 450 kg. Plenty of margin.
 
 ### Motor controllers: VESC
 
@@ -62,7 +66,7 @@ The OAK-D Lite is a stereo depth camera with an onboard AI chip (Intel Myriad X)
 - AI object detection with spatial coordinates (X, Y, Z in metres)
 - Person detection for follow-me
 
-For obstacle avoidance, I set a ground plane and flag anything protruding more than 5cm above it. Rocks RoBug can drive over are ignored. Stumps, logs, children — RoBug stops.
+For obstacle avoidance, I set a ground plane and flag anything protruding more than 5cm above it. Rocks E-Yor can drive over are ignored. Stumps, logs, children — E-Yor stops.
 
 The 95° horizontal field of view covers the full front arc. Mounted low on the frame below the bed deck so it doesn't interfere with payload.
 
@@ -92,29 +96,29 @@ Foxglove Studio ← ROS2 topics (telemetry dashboard on phone)
 
 ### Foxglove Studio
 
-Instead of building a custom dashboard, Foxglove Studio connects to ROS2 over WiFi and streams all telemetry — motor current, voltage, wheel speeds, camera feeds — to a browser. RoBug runs a WiFi hotspot; I connect my phone and open the dashboard. No app needed.
+Instead of building a custom dashboard, Foxglove Studio connects to ROS2 over WiFi and streams all telemetry — motor current, voltage, wheel speeds, camera feeds — to a browser. E-Yor runs a WiFi hotspot; I connect my phone and open the dashboard. No app needed.
 
 ## Follow-me mode
 
-The OAK-D Lite detects a person and tracks their position (X, Y, Z in metres from the camera). RoBug steers to keep them centred at ~2–3 metres distance.
+The OAK-D Lite detects a person and tracks their position (X, Y, Z in metres from the camera). E-Yor steers to keep them centred at ~2–3 metres distance.
 
-Activated by holding a button in the Foxglove web UI on my phone. Released, RoBug stops.
+Activated by holding a button in the Foxglove web UI on my phone. Released, E-Yor stops.
 
 ## Obstacle avoidance
 
-The OAK-D depth map is processed to build a height map of the terrain ahead. Anything taller than ~5cm above the ground plane in the forward arc triggers a speed reduction or stop depending on proximity. RoBug can drive over small rocks but stops for stumps, logs, and anything else significant.
+The OAK-D depth map is processed to build a height map of the terrain ahead. Anything taller than ~5cm above the ground plane in the forward arc triggers a speed reduction or stop depending on proximity. E-Yor can drive over small rocks but stops for stumps, logs, and anything else significant.
 
 The collision avoidance runs as a separate ROS2 node and has priority over all other commands including follow-me. If the depth camera sees an obstacle, the stop command overrides everything.
 
 ## Property boundaries
 
-Rather than implementing full SLAM and GPS-based geofencing (which is the right long-term approach), v1 uses BLE beacons mounted on trees at boundary points. When RoBug detects a boundary beacon's signal strength exceeding a threshold, it stops and waits.
+Rather than implementing full SLAM and GPS-based geofencing (which is the right long-term approach), v1 uses BLE beacons mounted on trees at boundary points. When E-Yor detects a boundary beacon's signal strength exceeding a threshold, it stops and waits.
 
 Small Bluetooth beacons — about the size of a coin — can be tucked behind bark so they're invisible. Each costs ~$10–15.
 
-## The prototype plan
+## The RoBug prototype plan
 
-Before ordering $1,400 in wheelbarrow motors and four VESCs, I'm building a small prototype with:
+Before ordering $1,400 in wheelbarrow motors and four VESCs, I'm building RoBug with:
 
 - Two salvaged hoverboard hub motors (~$50 for a dead hoverboard on Kijiji)
 - Two Flipsky Mini FSESC 6.7 Pro controllers (~$57 each)
@@ -122,11 +126,11 @@ Before ordering $1,400 in wheelbarrow motors and four VESCs, I'm building a smal
 - OAK-D Lite
 - A simple welded frame
 
-Same software stack. Every line of code transfers directly to the full RoBug build. The prototype validates the architecture before I commit the hardware budget.
+Same software stack. Every line of code transfers directly to the full E-Yor build. RoBug validates the architecture before I commit the hardware budget.
 
 ## What's next
 
-1. Source a dead hoverboard (motors only needed)
+1. Source a dead hoverboard for RoBug (motors only needed)
 2. Order two FSESC 6.7 Pro controllers
 3. Fabricate a simple frame
 4. Flash ROS2 Jazzy on the Pi
@@ -134,5 +138,6 @@ Same software stack. Every line of code transfers directly to the full RoBug bui
 6. Mount the OAK-D Lite and get obstacle detection running
 7. Build the Foxglove dashboard
 8. Test follow-me in the backyard
+9. Build E-Yor
 
 Build log continues as parts arrive.
