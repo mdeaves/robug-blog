@@ -30,3 +30,21 @@ A utility carrier that can:
 
 
 That's E-Yor.
+
+## Inspiration
+
+Some commercially available products do exist — but they're expensive (typically $20,000+), and they'd deny me the pleasure of building it myself. They also tend to be gasoline powered, and I really want to extend my knowledge of electric drivetrains, lithium-ion batteries, and robotic navigation.
+
+**The Ferocarrier** is probably the closest thing to what I have in mind — a tracked utility carrier with a flat bed, designed for rough terrain. Low, wide, stable. But it's a commercial product with a commercial price tag, and it won't follow me around or avoid stumps on its own.
+
+![Ferocarrier tracked utility carrier loaded with tools and equipment](/images/ferocarrier.jpg)
+
+**The Muck Truck** is another one I looked at — and this one is actually electric, which is encouraging. It's a walk-behind dumper, 4WD, designed for moving material across sites where a wheelbarrow won't cut it. But it requires an operator walking behind it the whole time, the payload is limited, and there's no path to autonomous operation.
+
+![Muck Truck electric 4WD walk-behind dumper](/images/muck-truck.png)
+
+And then there are **mini skid steers** and mini excavators — versatile, powerful, genuinely capable on rough ground. But they're large, require a trailer to transport, and are overkill for what I need. I want something that fits in the back of a Model Y.
+
+![Giant mini skid steer lifting a pile of brush](/images/mini-skid-steer.jpg)
+
+None of them quite fit. So I thought — I'll build it myself.
