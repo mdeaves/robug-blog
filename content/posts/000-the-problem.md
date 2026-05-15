@@ -34,11 +34,11 @@ That's E-Yor.
 
 Some commercially available products do exist — but they're expensive (typically $20,000+). They also tend to be gasoline powered, and I really want to extend my knowledge of electric drivetrains, lithium-ion batteries, and robotic navigation.
 
-**[The Ferocarrier](https://www.ferocarrier.com/en/tracked-carrier/fero-etp-10-electric-tracked-carrier/)** is probably the closest thing to what I have in mind — a tracked utility carrier with a flat bed, designed for rough terrain. Low, wide, stable. But it's a commercial product with a commercial price tag, and it won't follow me around or power 120 V tools.
+**[The Ferocarrier](https://www.ferocarrier.com/en/tracked-carrier/fero-etp-10-electric-tracked-carrier/)** is probably the closest thing to what I have in mind — a tracked utility carrier with a flat bed, designed for job site work. Low, wide, stable, but with limited ground clearance.
 
 ![Ferocarrier tracked utility carrier loaded with tools and equipment](/images/ferocarrier.jpg)
 
-**[The Muck Truck](https://www.mucktruck.com/us/ego-max/)** is another one I looked at. It's a walk-behind dumper, 4WD, designed for moving material across sites where a wheelbarrow won't cut it. But it requires an operator walking behind it the whole time, and I'm not sure it would handle the our rocky terraine very well. It's also quite expensive.
+**[The Muck Truck](https://www.mucktruck.com/us/ego-max/)** is another one I looked at. It's a walk-behind dumper, 4WD, designed for moving material across sites where a wheelbarrow won't cut it. But it requires an operator walking behind it the whole time, and I'm not sure it would handle the our rocky terrain very well. It's also quite expensive, and finding a dealer that carrys the electric version has been challenging in our area.
 
 ![Muck Truck electric 4WD walk-behind dumper](/images/muck-truck.png)
 
