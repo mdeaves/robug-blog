@@ -28,18 +28,17 @@ A utility carrier that can:
 - Is quiet and clean to operate (no IC engine)
 - Functions as a mobile power station with 120 V AC
 
-
 That's E-Yor.
 
 ## Inspiration
 
-Some commercially available products do exist — but they're expensive (typically $20,000+), and they'd deny me the pleasure of building it myself. They also tend to be gasoline powered, and I really want to extend my knowledge of electric drivetrains, lithium-ion batteries, and robotic navigation.
+Some commercially available products do exist — but they're expensive (typically $20,000+). They also tend to be gasoline powered, and I really want to extend my knowledge of electric drivetrains, lithium-ion batteries, and robotic navigation.
 
-**The Ferocarrier** is probably the closest thing to what I have in mind — a tracked utility carrier with a flat bed, designed for rough terrain. Low, wide, stable. But it's a commercial product with a commercial price tag, and it won't follow me around or avoid stumps on its own.
+**The Ferocarrier** is probably the closest thing to what I have in mind — a tracked utility carrier with a flat bed, designed for rough terrain. Low, wide, stable. But it's a commercial product with a commercial price tag, and it won't follow me around or power 120 V tools.
 
 ![Ferocarrier tracked utility carrier loaded with tools and equipment](/images/ferocarrier.jpg)
 
-**The Muck Truck** is another one I looked at — and this one is actually electric, which is encouraging. It's a walk-behind dumper, 4WD, designed for moving material across sites where a wheelbarrow won't cut it. But it requires an operator walking behind it the whole time, the payload is limited, and there's no path to autonomous operation.
+**The Muck Truck** is another one I looked at. It's a walk-behind dumper, 4WD, designed for moving material across sites where a wheelbarrow won't cut it. But it requires an operator walking behind it the whole time, and I'm not sure it would handle the our rocky terraine very well. It's also quite expensive.
 
 ![Muck Truck electric 4WD walk-behind dumper](/images/muck-truck.png)
 
