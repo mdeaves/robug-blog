@@ -15,15 +15,7 @@ This is a typical section of the property. What looks like a gentle slope is act
 
 ![Waterfront area with rocky terrain, picnic table, and wooded slope](/images/terrain-2.jpg)
 
-## The actual problems
-
-We have stumps. A lot of them. Removing them means either hiring equipment (expensive, and equipment access is limited by the terrain) or doing it by hand with a winch. We do the latter, which means hauling a heavy winch, chains, and snatch blocks across this terrain for every single stump.
-
-We heat mainly with wood. Firewood needs to get from where it's split to where it's stacked, across terrain like this, in quantities that make a wheelbarrow feel like a cruel joke.
-
-In winter, we get real Ontario snowfall. The paths between buildings need to be cleared. The pond freezes and the kids want to skate, which means Zamboni duty — flooding the surface with water, by hand, in the cold.
-
-## What we actually need
+## Our Dream Homestead Tool
 
 A utility carrier that can:
 
@@ -33,5 +25,8 @@ A utility carrier that can:
 - Move slowly and safely around kids, dogs, and other obstacles
 - Follow me around the property autonomously, or safely come to me at the touch of a button
 - Fit in the back of our Model Y so I can bring it wherever it is needed
+- Is quiet and clean to operate (no IC engine)
+- Functions as a mobile power station with 120 V AC
+
 
 That's E-Yor.
