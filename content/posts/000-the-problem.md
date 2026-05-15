@@ -1,5 +1,5 @@
 ---
-title: "Entry 000 — The Problem"
+title: "The Problem"
 date: 2026-05-12
 tags: ["property", "terrain", "concept"]
 summary: "Our rural Ontario property is beautiful, rocky, and exhausting to work on. This is why E-Yor needs to exist."
