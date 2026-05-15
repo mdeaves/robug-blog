@@ -1,0 +1,14 @@
+.theme-base-custom .sidebar {
+  background-color: #2d5a27;
+}
+
+.theme-base-custom .content a,
+.theme-base-custom .related-posts li a:hover {
+  color: #2d5a27;
+}
+
+.theme-base-custom .sidebar-nav-item.active,
+.theme-base-custom a.sidebar-nav-item:hover,
+.theme-base-custom a.sidebar-nav-item:focus {
+  text-decoration: underline;
+}

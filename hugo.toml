@@ -1,26 +1,12 @@
 baseURL = "https://robug.deaves.net"
 locale = "en-us"
 title = "RoBug Build Log"
-theme = "PaperMod"
+theme = "hyde"
 paginate = 10
 
 [params]
   author = "Michael Deaves"
-  description = "Building RoBug — a 4WD electric utility carrier with ROS2, VESC motor control, OAK-D vision, and autonomous follow-me capability."
-  ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowToc = true
-
-  [params.homeInfoParams]
-    Title = "RoBug Build Log"
-    Content = "Documenting the build of RoBug — a 4WD electric utility carrier for homestead work, with autonomous follow-me, obstacle avoidance, and telemetry streaming. Built on ROS2, VESC, and an OAK-D Lite depth camera."
-
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/mdeaves"
+  description = "Documenting the build of RoBug — a smart 4WD electric utility carrier."
 
 [menu]
   [[menu.main]]
