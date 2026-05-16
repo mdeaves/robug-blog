@@ -2,7 +2,7 @@
 title: "The Problem"
 date: 2026-05-12
 tags: ["property", "terrain", "concept"]
-summary: "Our rural Ontario property is beautiful, rocky, and exhausting to work on. This is why E-Yor needs to exist."
+summary: "Our rural Ontario property is beautiful, rocky, and exhausting to work on. This is why RoBug needs to exist."
 ---
 
 Our family has property in Ontario on the Canadian Shield. If you've spent time in this part of the country you know what that means: exposed bedrock, uneven ground, steep slopes, trees growing straight out of solid rock, and leaf or snow covered terrain that hides everything underneath.
@@ -15,24 +15,9 @@ This is a typical section of the property. What looks like a gentle slope is act
 
 ![Waterfront area with rocky terrain, picnic table, and wooded slope](/images/terrain-2.jpg)
 
-## Our Dream Homestead Tool
-
-A utility carrier that can:
-
-- Handle Canadian Shield terrain — rocks, roots, slopes, soft ground
-- Carry 200–250 kg of payload without tipping or bogging
-- Pull stumps via a front winch
-- Move slowly and safely around kids, dogs, and other obstacles
-- Follow me around the property autonomously, or safely come to me at the touch of a button
-- Fit in the back of our Model Y so I can bring it wherever it is needed
-- Is quiet and clean to operate (no IC engine)
-- Functions as a mobile power station with 120 V AC
-
-That's E-Yor.
-
 ## Inspiration
 
-Some commercially available products do exist — but they're expensive (typically $20,000+). They also tend to be gasoline powered, and I really want to extend my knowledge of electric drivetrains, lithium-ion batteries, and robotic navigation.
+Some commercially available solutions do exist — but they're expensive (typically $20,000+). They also tend to be gasoline powered, and I really want to extend my knowledge of electric drivetrains, lithium-ion batteries, and robotic navigation.
 
 **[The Ferocarrier](https://www.ferocarrier.com/en/tracked-carrier/fero-etp-10-electric-tracked-carrier/)** is probably the closest thing to what I have in mind — a tracked utility carrier with a flat bed, designed for job site work. Low, wide, stable, but with limited ground clearance.
 
