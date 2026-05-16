@@ -21,13 +21,13 @@ Commercial utility carriers exist, but nothing quite hits the combination of pri
 - **Autonomous Following with Smart Obstacle Avoidance**
 - **250 kg Max. Payload**
 - **10 km/hr Max. Speed**
-- **Handles Rocky Forested Terrain With Ease**
+- **Handles Rocky Forested Terrain with Ease**
 - **Can Climb 25% Grade Fully Loaded**
-- **Capable of Holding Load on Slope Without Power (Will Not Roll Away)**
+- **Capable of Holding Load on a Slope Without Power (Will Not Roll Away)**
 - **Fits in a Model Y Trunk**
-- **5 Hours Of Run Time**
+- **5 Hours of Run Time**
 - **Fully Weather Proof**
-- **Can Operate From -20C to +30C**
+- **Can Operate from -20C to +30C**
 - **120 V Onboard Power**
 
 ## The Prototype
