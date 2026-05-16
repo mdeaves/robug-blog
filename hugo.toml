@@ -1,12 +1,12 @@
 baseURL = "https://robug.deaves.net"
 locale = "en-us"
-title = "E-Yor Build Log"
+title = "RoBug Build Log"
 theme = "hyde"
 paginate = 10
 
 [params]
   author = "Michael Deaves"
-  description = "Documenting the build of E-Yor — a smart 4WD electric utility carrier."
+  description = "Documenting the build of a smart electric utility rover."
 
 [menu]
   [[menu.main]]
