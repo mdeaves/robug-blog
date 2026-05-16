@@ -23,7 +23,7 @@ Some commercially available solutions do exist — but they're expensive (typica
 
 ![Ferocarrier tracked utility carrier loaded with tools and equipment](/images/ferocarrier.jpg)
 
-**[The Muck Truck](https://www.mucktruck.com/us/ego-max/)** is another one I looked at. It's a walk-behind dumper, 4WD, designed for moving material across sites where a wheelbarrow won't cut it. But it requires an operator walking behind it the whole time, and I'm not sure it would handle the our rocky terrain very well. It's also quite expensive, and finding a dealer that carrys the electric version has been challenging in our area.
+**[The Muck Truck](https://www.mucktruck.com/us/ego-max/)** is another one I looked at. It's a walk-behind dumper, 4WD, designed for moving material across sites where a wheelbarrow won't cut it. But it requires an operator walking behind it the whole time, and I'm not sure it would handle our rocky terrain very well. It's also quite expensive, and finding a dealer that carrys the electric version has been challenging in our area.
 
 ![Muck Truck electric 4WD walk-behind dumper](/images/muck-truck.png)
 
