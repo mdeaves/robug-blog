@@ -1,5 +1,5 @@
 ---
-title: "Mechanical Concept: Choosing the Drivetrain"
+title: "Drivetrain Concept"
 date: 2026-05-18
 tags: ["mechanical", "suspension", "drivetrain", "hub motors", "rover"]
 summary: "Working out the power requirements, then evaluating every drivetrain and suspension concept — from tracks to Mars rovers — before landing on a 6WD rocker-bogie derivative."
