@@ -109,17 +109,17 @@
 <p>One thing puzzled me at first: rock crawlers and ATVs need springs and dampers, but Mars rovers don&rsquo;t. What&rsquo;s going on?</p>
 <p>I think it comes down to two things: <strong>speed</strong> and <strong>passengers</strong>.</p>
 <p>Springs and dampers exist to manage energy. When a wheel hits a rock at speed, the spring stores and releases that energy gradually instead of transmitting it as a shock through the chassis. The damper bleeds off the energy so the chassis doesn&rsquo;t bounce. At low speeds, the energy involved is small enough that passive geometry can handle it without dedicated spring elements.</p>
-<p>The other reason is that Mars rovers don&rsquo;t carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. E-Yor carries rocks and firewood. Payload doesn&rsquo;t care.</p>
-<p>This is the assumption the whole design rests on. E-Yor will move slowly — walking pace or less — and won&rsquo;t have a human on board. I&rsquo;m hoping that means I can get away without springs. The prototype will tell me if I&rsquo;m wrong.</p>
+<p>The other reason is that Mars rovers don&rsquo;t carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. RoBug carries rocks and firewood. Payload doesn&rsquo;t care.</p>
+<p>This is the assumption the whole design rests on. RoBug will move slowly — walking pace or less — and won&rsquo;t have a human on board. I&rsquo;m hoping that means I can get away without springs. The prototype will tell me if I&rsquo;m wrong.</p>
 <h2 id="power-6--1000-w">Power: 6 × 1,000 W</h2>
 <p>With six driven wheels, I need each motor to deliver 1,000 W to meet the 6,000 W traction target. A 1,000 W hub motor per wheel gets me exactly there.</p>
 <p>Six hub motors is a clean fit. No gearboxes, no chains, no sprockets. Each bogie is a self-contained unit with two motor-wheels.</p>
 <h2 id="steering-tank-steer-not-corner-servos">Steering: tank steer, not corner servos</h2>
-<p>There&rsquo;s one significant way E-Yor diverges from the NASA/ESA rover design: steering.</p>
+<p>There&rsquo;s one significant way RoBug diverges from the NASA/ESA rover design: steering.</p>
 <p>Every six-wheeled Mars rover steers by pivoting the corner wheels around their vertical axis — active steering servos in the corner hubs. This gives precise, low-scrub turning. It also means six steering actuators, pivot bearings at each corner, and a steering control system on top of the drive control system.</p>
 <p>I&rsquo;m not building that.</p>
-<p>Instead, E-Yor will <strong>tank steer</strong> — run the left wheels faster than the right to turn, exactly like a skid steer robot. It&rsquo;s less precise and causes some tyre scrub as the outer wheels travel a longer arc than the inner ones. But it requires zero additional hardware beyond the drive motors I already need.</p>
-<p>To reduce scrub, I&rsquo;ll design E-Yor with a <strong>shorter wheelbase relative to its track width</strong> than the rover references. A more square footprint reduces the turning radius and the scrub distance on the outer wheels. The prototype will let me measure how much scrub actually happens on different surfaces before I commit to the full E-Yor dimensions.</p>
+<p>Instead, RoBug will <strong>tank steer</strong> — run the left wheels faster than the right to turn, exactly like a skid steer robot. It&rsquo;s less precise and causes some tyre scrub as the outer wheels travel a longer arc than the inner ones. But it requires zero additional hardware beyond the drive motors I already need.</p>
+<p>To reduce scrub, I&rsquo;ll design RoBug with a <strong>shorter wheelbase relative to its track width</strong> than the rover references. A more square footprint reduces the turning radius and the scrub distance on the outer wheels. The prototype will let me measure how much scrub actually happens on different surfaces before I commit to the full RoBug dimensions.</p>
 <h2 id="where-we-are">Where we are</h2>
 <p>The mechanical concept:</p>
 <ul>

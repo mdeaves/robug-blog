@@ -99,9 +99,9 @@ I think it comes down to two things: **speed** and **passengers**.
 
 Springs and dampers exist to manage energy. When a wheel hits a rock at speed, the spring stores and releases that energy gradually instead of transmitting it as a shock through the chassis. The damper bleeds off the energy so the chassis doesn't bounce. At low speeds, the energy involved is small enough that passive geometry can handle it without dedicated spring elements.
 
-The other reason is that Mars rovers don't carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. E-Yor carries rocks and firewood. Payload doesn't care.
+The other reason is that Mars rovers don't carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. RoBug carries rocks and firewood. Payload doesn't care.
 
-This is the assumption the whole design rests on. E-Yor will move slowly — walking pace or less — and won't have a human on board. I'm hoping that means I can get away without springs. The prototype will tell me if I'm wrong.
+This is the assumption the whole design rests on. RoBug will move slowly — walking pace or less — and won't have a human on board. I'm hoping that means I can get away without springs. The prototype will tell me if I'm wrong.
 
 ## Power: 6 × 1,000 W
 
@@ -111,15 +111,15 @@ Six hub motors is a clean fit. No gearboxes, no chains, no sprockets. Each bogie
 
 ## Steering: tank steer, not corner servos
 
-There's one significant way E-Yor diverges from the NASA/ESA rover design: steering.
+There's one significant way RoBug diverges from the NASA/ESA rover design: steering.
 
 Every six-wheeled Mars rover steers by pivoting the corner wheels around their vertical axis — active steering servos in the corner hubs. This gives precise, low-scrub turning. It also means six steering actuators, pivot bearings at each corner, and a steering control system on top of the drive control system.
 
 I'm not building that.
 
-Instead, E-Yor will **tank steer** — run the left wheels faster than the right to turn, exactly like a skid steer robot. It's less precise and causes some tyre scrub as the outer wheels travel a longer arc than the inner ones. But it requires zero additional hardware beyond the drive motors I already need.
+Instead, RoBug will **tank steer** — run the left wheels faster than the right to turn, exactly like a skid steer robot. It's less precise and causes some tyre scrub as the outer wheels travel a longer arc than the inner ones. But it requires zero additional hardware beyond the drive motors I already need.
 
-To reduce scrub, I'll design E-Yor with a **shorter wheelbase relative to its track width** than the rover references. A more square footprint reduces the turning radius and the scrub distance on the outer wheels. The prototype will let me measure how much scrub actually happens on different surfaces before I commit to the full E-Yor dimensions.
+To reduce scrub, I'll design RoBug with a **shorter wheelbase relative to its track width** than the rover references. A more square footprint reduces the turning radius and the scrub distance on the outer wheels. The prototype will let me measure how much scrub actually happens on different surfaces before I commit to the full RoBug dimensions.
 
 ## Where we are
 
