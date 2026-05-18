@@ -9,7 +9,7 @@ summary: "Working out the power requirements, then evaluating every drivetrain a
 
 Before choosing a drivetrain, I needed to know how much power to drive it with.
 
-RoBug's specs call for a 250 kg payload capacity. I estimate the unloaded machine will weigh around 200 kg — so all-up loaded mass is **450 kg**. The terrain requirement is a **20% slope** (roughly 11°). The max speed of the vehicle is 10 km/hr, or 2.8 m/s.
+RoBug's specs call for a 250 kg payload capacity. I estimate the unloaded machine will weigh around 200 kg — so all-up loaded mass is **450 kg**. The terrain requirement is a **20% slope** (roughly 11°). The max speed of the vehicle is 10 km/hr, but that is for the unloaded vehicle. The maxmimum fully loaded speed will be more like 5 km/hr, or 1.4 m/s.
 
 Running the numbers on traction power for a wheeled vehicle:
 
@@ -17,7 +17,7 @@ Running the numbers on traction power for a wheeled vehicle:
 P = V x [m × g × sin(θ) + m × g × Crr × cos(θ)]
 ```
 
-Where rolling resistance coefficient (Crr) for rough terrain is around 0.15. At a maximum loaded speed of 5 km/h, a 20% slope, and some margin for acceleration and poor ground conditions, you land at roughly **3,000 W of traction power**. That's the target.
+Where rolling resistance coefficient (Crr) for rough terrain is around 0.15 we get 2,600 W. Let's round it up to have some buffer. **3,000 W of traction power**. That's the target.
 
 Now — how do you deliver that to the ground, across Canadian Shield terrain, with a machine you can actually build in a garage?
 
