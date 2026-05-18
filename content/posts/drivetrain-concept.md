@@ -27,9 +27,9 @@ Now — how do you deliver that to the ground, across Canadian Shield terrain, w
 
 They distribute ground pressure over a large area, provide excellent traction, and handle soft ground far better than wheels. The Ferocarrier I looked at in the first post uses tracks precisely because of this.
 
-But the problems are real. Building a functional track system from scratch — idlers, drive sprockets, track tensioners, the track itself — is a significant fabrication challenge. And once built, tracks are maintenance-intensive. Mud and debris pack into the drive mechanism. Track links wear and stretch. If something breaks in the field, you're not fixing it with a wrench.
+But the problems are real. Building a functional track system from scratch — idlers, drive sprockets, track tensioners, the track itself — is a significant fabrication challenge. And once built, tracks are maintenance-intensive. Mud and debris pack into the drive mechanism. Tracks will often come off the idlers if not designed properly.
 
-Tracks are out.
+Unfortuantely, tracks are out.
 
 ## Option 2: Fixed-wheel 4WD skid steer
 
@@ -37,9 +37,9 @@ The simplest wheeled option: four wheels, each with its own motor, no suspension
 
 ![A 4WD skid steer wheeled robot — compact, flat, no suspension](/images/tracked-carrier.jpg)
 
-Lots of robot rovers use this successfully. It's cheap, easy to build, and easy to control. The problem is that without suspension on uneven terrain, the rigid frame means statistically only three of the four wheels are in firm contact with the ground at any time. One wheel is always bridging a gap or floating over a rock. On the Canadian Shield, that's most of the time.
+Lots of robot rovers use this successfully. It's cheap, easy to build, and easy to control. The problem is that without suspension on uneven terrain only three of the four wheels are in firm contact with the ground at any time.
 
-Three-point contact isn't the end of the world, but it limits traction and puts a lot of stress on the frame. I want better than this.
+Three-point contact isn't the end of the world but I think we can do better.
 
 ## Option 3: ATV-style independent suspension
 
@@ -49,7 +49,7 @@ If you want proven off-road performance, look at what ATVs and UTVs do.
 
 Independent suspension at each corner — coilovers, control arms, uprights — gives you great wheel travel and keeps tyres planted on uneven ground. It's a tested, mature design.
 
-The problem is the mechanical complexity. Control arms, uprights, bearings, spring perches, shock absorbers — each of these components needs to be designed, fabricated, and aligned correctly. It's doable for a professional fabricator. For a garage build, it's a substantial scope creep risk. The same reason I ruled out tracks.
+The problem is the mechanical complexity. Control arms, uprights, bearings, spring perches, shock absorbers — each of these components needs to be sourced or designed and fabricated by me. It's doable for a professional fabricator. For a garage build, it's a substantial scope creep risk. So independent suspesion is out for the same reason as tracks, too complicated.
 
 ## Option 4: Rock crawler 4-bar suspension
 
@@ -57,13 +57,11 @@ Rock crawlers use a simpler suspension than ATVs — a 4-bar linkage at each cor
 
 ![A rock crawler Jeep flexing its suspension over large boulders](/images/rock-crawler.jpg)
 
-The 4-bar is simpler to fabricate. But rock crawlers need axles to transmit power to the wheels. If I'm going hub motors — motors integrated directly into each wheel — I don't need axles. But the 4-bar suspension *uses* the axle housing as a structural element, constraining the wheel to move only vertically. Without a real axle, I'd need to build a fake structural axle just to mount the hub motors and give the suspension something to locate against.
+The 4-bar is a little simpler to fabricate independent suspension. Rock crawlers need axles to transmit power to the wheels. If I'm going with hub motors — at this point I think they make sense — I don't need axles at all. Surely that frees me up to build something even more capable.
 
-That feels like solving a problem I created for myself.
+## Off-road suspension with hub motors
 
-## A better question: what really needs to go anywhere?
-
-I started thinking about vehicles that are genuinely designed to traverse completely unknown terrain with zero margin for getting stuck.
+What vehicles use hub motors and are designed for extreme off-road capability?
 
 The Mars Rovers.
 
@@ -73,23 +71,23 @@ Curiosity and Perseverance use a **rocker-bogie suspension** system that keeps a
 
 ![Rocker-bogie suspension geometry keeping all wheels in contact as the vehicle crosses uneven ground](/images/bogie-diagram.png)
 
-The catch is that pivot point. Because the two rockers pivot independently, there's nothing to constrain the pitch of the chassis relative to the rockers — the chassis would just flop forward or backward. NASA solves this with a differential in the pivot connecting the two rocker shafts. The differential transmits chassis pitch between both sides and provides the third constraint.
+The catch is that pivot point. Because the two rockers pivot independently, there's nothing to constrain the pitch of the chassis relative to the rockers — the chassis would just flop forward or backward. NASA solves this with a differential in the pivot connecting the two rocker shafts. The chassis is constrained by the differential housing. Again, this not something I want to source or fabricate.
 
-That differential is a precision component. Not something I want to fabricate.
+## 3-bogie suspension
 
-## The ESA solution: 3-bogie suspension
-
-Fortunately, the European Space Agency took a different approach for the ExoMars rover.
+Fortunately, people way smarter than have come up with a different approach.
 
 ![ExoMars rover with 3-bogie suspension on Martian terrain](/images/exomars-rover.jpg)
 
 The **3-bogie system** uses three independent bogies — one on each side of the vehicle, and one at the rear — each carrying two wheels (six total). The chassis mounts to all three bogies through pivoting connections.
 
-Here's what's clever about the rear bogie: it's rotated 90° relative to the side bogies. The two side bogies can only pivot around their longitudinal axis (roll). The rear bogie, mounted transversely, can only pivot around the lateral axis (pitch). Together, all three bogies constrain the chassis in roll *and* pitch — no differential required.
+The rear bogie is rotated 90° relative to the side bogies. Together, all three bogies constrain the chassis in roll *and* pitch — no differential required.
+
+This is the approach the European Space Agency took for the ExoMars rover.
 
 ![3 bogies conceptual design — two side bogies and one rear bogie rotated 90°](/images/3-bogie-concept.png)
 
-Three bogies, six wheels, six hub motors, full terrain contact. This is the design.
+Three bogies, six wheels, six hub motors, full terrain contact. Very capable, dead simple. This is the design.
 
 ## Why no springs?
 
@@ -97,15 +95,13 @@ One thing puzzled me at first: rock crawlers and ATVs need springs and dampers, 
 
 I think it comes down to two things: **speed** and **passengers**.
 
-Springs and dampers exist to manage energy. When a wheel hits a rock at speed, the spring stores and releases that energy gradually instead of transmitting it as a shock through the chassis. The damper bleeds off the energy so the chassis doesn't bounce. At low speeds, the energy involved is small enough that passive geometry can handle it without dedicated spring elements.
+Springs and dampers exist to manage energy. When a wheel hits a rock at speed, the spring stores and releases that energy gradually instead of transmitting it as a shock through the chassis. The damper bleeds off the energy so the chassis doesn't bounce. At low speeds, the energy involved is small enough that passive geometry can handle it without dedicated spring elements. At least that's my hope.
 
-The other reason is that Mars rovers don't carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. RoBug carries rocks and firewood. Payload doesn't care.
-
-This is the assumption the whole design rests on. RoBug will move slowly — walking pace or less — and won't have a human on board. I'm hoping that means I can get away without springs. The prototype will tell me if I'm wrong.
+The other reason is that Mars rovers don't carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. RoBug is not going to carry passengers, so vibrations are less of an issue.
 
 ## Power: 6 × 1,000 W
 
-With six driven wheels, I need each motor to deliver 1,000 W to meet the 6,000 W traction target. A 1,000 W hub motor per wheel gets me exactly there.
+With six driven wheels, I need each motor to deliver 1,000 W to meet the 6,000 W traction target.
 
 Six hub motors is a clean fit. No gearboxes, no chains, no sprockets. Each bogie is a self-contained unit with two motor-wheels.
 
@@ -117,7 +113,7 @@ Every six-wheeled Mars rover steers by pivoting the corner wheels around their v
 
 I'm not building that.
 
-Instead, RoBug will **tank steer** — run the left wheels faster than the right to turn, exactly like a skid steer robot. It's less precise and causes some tyre scrub as the outer wheels travel a longer arc than the inner ones. But it requires zero additional hardware beyond the drive motors I already need.
+Instead, RoBug will **tank steer** — run the left wheels faster than the right to turn, exactly like a skid steer robot. It's less precise but requires zero additional hardware beyond the drive motors I already need.
 
 To reduce scrub, I'll design RoBug with a **shorter wheelbase relative to its track width** than the rover references. A more square footprint reduces the turning radius and the scrub distance on the outer wheels. The prototype will let me measure how much scrub actually happens on different surfaces before I commit to the full RoBug dimensions.
 
@@ -126,7 +122,7 @@ To reduce scrub, I'll design RoBug with a **shorter wheelbase relative to its tr
 The mechanical concept:
 
 - **6WD, 6 hub motors** — 1,000 W each, 6,000 W total traction power
-- **3-bogie suspension** (ExoMars-derived) — all six wheels in constant ground contact, no differential, no springs
+- **3-bogie suspension** - all six wheels in constant ground contact, no differential, no springs
 - **Tank steering** — differential drive, no corner servos
 - **Compact L/W ratio** — to keep tank-steer scrub manageable
 
