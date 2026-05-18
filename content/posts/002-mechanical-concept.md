@@ -1,5 +1,5 @@
 ---
-title: "Entry 002 — Mechanical Concept: Choosing the Drivetrain"
+title: "Mechanical Concept: Choosing the Drivetrain"
 date: 2026-05-18
 tags: ["mechanical", "suspension", "drivetrain", "hub motors", "rover"]
 summary: "Working out the power requirements, then evaluating every drivetrain and suspension concept — from tracks to Mars rovers — before landing on a 6WD rocker-bogie derivative."
@@ -9,7 +9,7 @@ summary: "Working out the power requirements, then evaluating every drivetrain a
 
 Before choosing a drivetrain, I needed to know how much power to drive it with.
 
-E-Yor's specs call for a 250 kg payload capacity. I estimate the unloaded machine will weigh around 200 kg — so all-up loaded mass is **450 kg**. The terrain requirement is a **20% slope** (roughly 11°).
+RoBug's specs call for a 250 kg payload capacity. I estimate the unloaded machine will weigh around 200 kg — so all-up loaded mass is **450 kg**. The terrain requirement is a **20% slope** (roughly 11°).
 
 Running the numbers on traction power for a wheeled vehicle:
 
@@ -17,13 +17,11 @@ Running the numbers on traction power for a wheeled vehicle:
 F = m × g × sin(θ) + m × g × Crr × cos(θ)
 ```
 
-Where rolling resistance coefficient (Crr) for rough terrain is around 0.15. With a 20% slope and some margin for acceleration and poor ground conditions, you land at roughly **3,500 W of traction power**. That's the target.
+Where rolling resistance coefficient (Crr) for rough terrain is around 0.15. With a 20% slope and some margin for acceleration and poor ground conditions, you land at roughly **6,000 W of traction power**. That's the target.
 
 Now — how do you deliver that to the ground, across Canadian Shield terrain, with a machine you can actually build in a garage?
 
 ## Option 1: Tracks
-
-Let's be honest. Tracks look incredible.
 
 ![A tracked utility carrier climbing over a log in the woods](/images/tracked-carrier.jpg)
 
