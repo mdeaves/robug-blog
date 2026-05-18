@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://robug.deaves.net/tags/mechanical/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mechanical Concept: Choosing the Drivetrain</title>
-      <link>https://robug.deaves.net/posts/002-mechanical-concept/</link>
+      <title>Drivetrain Concept</title>
+      <link>https://robug.deaves.net/posts/drivetrain-concept/</link>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/posts/002-mechanical-concept/</guid>
+      <guid>https://robug.deaves.net/posts/drivetrain-concept/</guid>
       <description>Working out the power requirements, then evaluating every drivetrain and suspension concept — from tracks to Mars rovers — before landing on a 6WD rocker-bogie derivative.</description>
     </item>
   </channel>

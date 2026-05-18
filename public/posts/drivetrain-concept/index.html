@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.161.1">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Drivetrain Concept &middot; RoBug Build Log</title>
+  <meta name="description" content="" />
+
+  
+  
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/css/print.min.46d9bcbd80937d55db06b7034dfed7fc48b2bfb13e535dd9eac5581bfbaa8ddf.css"
+      media="print"
+      integrity="sha256-Rtm8vYCTfVXbBrcDTf7X/Eiyv7E&#43;U13Z6sVYG/uqjd8="
+      crossorigin="anonymous" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/css/hyde-bundle.min.612b3c1e758019dac415036c9624d495454cd58eb620e5f2b32338993cb54952.css"
+      media="all"
+      integrity="sha256-YSs8HnWAGdrEFQNsliTUlUVM1Y62IOXysyM4mTy1SVI="
+      crossorigin="anonymous" />  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+
+  
+  
+</head>
+
+  <link rel="stylesheet" href="/css/custom.css">
+  <body class="theme-base-custom ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://robug.deaves.net/"><h1>RoBug Build Log</h1></a>
+      <p class="lead">
+       Documenting the build of a smart electric utility rover. 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://robug.deaves.net/">Home</a> </li>
+        <li><a href="/posts/"> Posts </a></li><li><a href="/about/"> About </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2026. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Drivetrain Concept</h1>
+  <time datetime=2026-05-18T00:00:00Z class="post-date">Mon, May 18, 2026</time>
+  <h2 id="starting-with-the-numbers">Starting with the numbers</h2>
+<p>Before choosing a drivetrain, I needed to know how much power to drive it with.</p>
+<p>RoBug&rsquo;s specs call for a 250 kg payload capacity. I estimate the unloaded machine will weigh around 200 kg — so all-up loaded mass is <strong>450 kg</strong>. The terrain requirement is a <strong>20% slope</strong> (roughly 11°). The max speed of the vehicle is 10 km/hr, or 2.8 m/s.</p>
+<p>Running the numbers on traction power for a wheeled vehicle:</p>
+<pre tabindex="0"><code>P = V x [m × g × sin(θ) + m × g × Crr × cos(θ)]
+</code></pre><p>Where rolling resistance coefficient (Crr) for rough terrain is around 0.15. At a maximum loaded speed of 5 km/h, a 20% slope, and some margin for acceleration and poor ground conditions, you land at roughly <strong>3,000 W of traction power</strong>. That&rsquo;s the target.</p>
+<p>Now — how do you deliver that to the ground, across Canadian Shield terrain, with a machine you can actually build in a garage?</p>
+<h2 id="tracks">Tracks</h2>
+<p><img src="/images/skid-steer-robot.jpg" alt="A tracked utility carrier climbing over a log in the woods"></p>
+<p>They distribute ground pressure over a large area, provide excellent traction, and handle soft ground far better than wheels. The Ferocarrier I looked at in the first post uses tracks precisely because of this.</p>
+<p>But the problems are real. Building a functional track system from scratch — idlers, drive sprockets, track tensioners, the track itself — is a significant fabrication challenge. And once built, tracks are maintenance-intensive. Mud and debris pack into the drive mechanism. Tracks will often come off the idlers if not designed properly.</p>
+<p>Unfortuantely, tracks are out.</p>
+<h2 id="fixed-wheel-4wd-skid-steer">Fixed-wheel 4WD skid steer</h2>
+<p>The simplest wheeled option: four wheels, each with its own motor, no suspension. Turn by running one side faster than the other — classic skid steer, the same principle used by tanks and countless small robot platforms.</p>
+<p><img src="/images/tracked-carrier.jpg" alt="A 4WD skid steer wheeled robot — compact, flat, no suspension"></p>
+<p>Lots of robot rovers use this successfully. It&rsquo;s cheap, easy to build, and easy to control. The problem is that without suspension on uneven terrain only three of the four wheels are in firm contact with the ground at any time.</p>
+<p>Three-point contact isn&rsquo;t the end of the world but I think we can do better.</p>
+<h2 id="atv-style-independent-suspension">ATV-style independent suspension</h2>
+<p>If you want proven off-road performance, look at what ATVs and UTVs do.</p>
+<p><img src="/images/atv-suspension.jpg" alt="A UTV with independent suspension navigating a rocky trail"></p>
+<p>Independent suspension at each corner — coilovers, control arms, uprights — gives you great wheel travel and keeps tyres planted on uneven ground. It&rsquo;s a tested, mature design.</p>
+<p>The problem is the mechanical complexity. Control arms, uprights, bearings, spring perches, shock absorbers — each of these components needs to be sourced or designed and fabricated by me. It&rsquo;s doable for a professional fabricator. For a garage build, it&rsquo;s a substantial scope creep risk. So independent suspesion is out for the same reason as tracks, too complicated.</p>
+<h2 id="rock-crawler-4-bar-suspension">Rock crawler 4-bar suspension</h2>
+<p>Rock crawlers use a simpler suspension than ATVs — a 4-bar linkage at each corner rather than independent control arms. These vehicles are genuinely impressive off-road.</p>
+<p><img src="/images/rock-crawler.jpg" alt="A rock crawler Jeep flexing its suspension over large boulders"></p>
+<p>The 4-bar is a little simpler to fabricate than independent suspension. Rock crawlers need axles to transmit power to the wheels. If I&rsquo;m going with hub motors — at this point I think they make sense — I don&rsquo;t need axles at all. Surely that frees me up to build something even more capable.</p>
+<h2 id="off-road-suspension-with-hub-motors">Off-road suspension with hub motors</h2>
+<p>What vehicles use hub motors and are designed for extreme off-road capability?</p>
+<p>The Mars Rovers.</p>
+<p><img src="/images/nasa-mars-rover.jpg" alt="NASA Mars Exploration Rover — 6-wheeled rocker-bogie suspension"></p>
+<p>Curiosity and Perseverance use a <strong>rocker-bogie suspension</strong> system that keeps all six wheels in constant contact with the ground regardless of terrain. The geometry is elegant: two rockers on either side, connected at a pivot point on the chassis, with a bogie at the rear of each rocker carrying two wheels. The front of each rocker has a single wheel.</p>
+<p><img src="/images/bogie-diagram.png" alt="Rocker-bogie suspension geometry keeping all wheels in contact as the vehicle crosses uneven ground"></p>
+<p>The catch is that pivot point. Because the two rockers pivot independently, there&rsquo;s nothing to constrain the pitch of the chassis relative to the rockers — the chassis would just flop forward or backward. NASA solves this with a differential in the pivot connecting the two rocker shafts. The chassis is constrained by the differential housing. Again, this not something I want to source or fabricate.</p>
+<h2 id="3-bogie-suspension">3-bogie suspension</h2>
+<p>Fortunately, people way smarter than me have come up with a different approach.</p>
+<p><img src="/images/exomars-rover.jpg" alt="ExoMars rover with 3-bogie suspension on Martian terrain"></p>
+<p>The <strong>3-bogie system</strong> uses three independent bogies — one on each side of the vehicle, and one at the rear — each carrying two wheels (six total). The chassis mounts to all three bogies through pivoting connections.</p>
+<p>The rear bogie is rotated 90° relative to the side bogies. Together, all three bogies constrain the chassis in roll <em>and</em> pitch — no differential required.</p>
+<p>This is the approach the European Space Agency took for the ExoMars rover.</p>
+<p><img src="/images/3-bogie-concept.png" alt="3 bogies conceptual design — two side bogies and one rear bogie rotated 90°"></p>
+<p>Three bogies, six wheels, six hub motors, full terrain contact. Very capable, dead simple. This is the design.</p>
+<h2 id="why-no-springs">Why no springs?</h2>
+<p>One thing puzzled me at first: rock crawlers and ATVs need springs and dampers, but Mars rovers don&rsquo;t. What&rsquo;s going on?</p>
+<p>I think it comes down to two things: <strong>speed</strong> and <strong>passengers</strong>.</p>
+<p>Springs and dampers exist to manage energy. When a wheel hits a rock at speed, the spring stores and releases that energy gradually instead of transmitting it as a shock through the chassis. The damper bleeds off the energy so the chassis doesn&rsquo;t bounce. At low speeds, the energy involved is small enough that passive geometry can handle it without dedicated spring elements. At least that&rsquo;s my hope.</p>
+<p>The other reason is that Mars rovers don&rsquo;t carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. RoBug is not going to carry passengers, so vibrations are less of an issue.</p>
+<h2 id="power-6--500-w">Power: 6 × 500 W</h2>
+<p>With six driven wheels, I need each motor to deliver 500 W to meet the 3,000 W traction target.</p>
+<p>Six hub motors is a clean fit. No gearboxes, no chains, no sprockets. Each bogie is a self-contained unit with two motor-wheels. I could easily remove each to fit the rover in the back of our car.</p>
+<h2 id="steering-tank-steer-not-corner-servos">Steering: tank steer, not corner servos</h2>
+<p>There&rsquo;s one significant way RoBug diverges from the NASA/ESA rover design: steering.</p>
+<p>Every six-wheeled Mars rover steers by pivoting the corner wheels around their vertical axis — active steering servos in the corner hubs. This gives precise, low-scrub turning. It also means four steering actuators, pivot bearings at each corner, and a steering control system on top of the drive control system.</p>
+<p>I&rsquo;m not building that.</p>
+<p>Instead, RoBug will <strong>tank steer</strong> — run the left wheels faster than the right to turn, exactly like a skid steer robot. It&rsquo;s less precise but requires zero additional hardware beyond the drive motors I already need.</p>
+<p>To reduce scrub, I&rsquo;ll design RoBug with a <strong>shorter wheelbase relative to its track width</strong> than the rover references. A more square footprint reduces the turning radius and the scrub distance on the outer wheels. The prototype will let me measure how much scrub actually happens on different surfaces before I commit to the full RoBug dimensions.</p>
+<h2 id="where-we-are">Where we are</h2>
+<p>The mechanical concept:</p>
+<ul>
+<li><strong>6WD, 6 hub motors</strong> — 500 W each, 3,000 W total traction power</li>
+<li><strong>3-bogie suspension</strong> - all six wheels in constant ground contact, no differential, no springs</li>
+<li><strong>Tank steering</strong> — differential drive, no corner servos</li>
+<li><strong>Compact L/W ratio</strong> — to keep tank-steer scrub manageable</li>
+</ul>
+<p>Next up: translating this into a fabricable frame design and sourcing the structural materials.</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

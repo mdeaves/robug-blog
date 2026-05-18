@@ -17,7 +17,7 @@ Running the numbers on traction power for a wheeled vehicle:
 P = V x [m × g × sin(θ) + m × g × Crr × cos(θ)]
 ```
 
-Where rolling resistance coefficient (Crr) for rough terrain is around 0.15. With a 20% slope and some margin for acceleration and poor ground conditions, you land at roughly **6,000 W of traction power**. That's the target.
+Where rolling resistance coefficient (Crr) for rough terrain is around 0.15. At a maximum loaded speed of 5 km/h, a 20% slope, and some margin for acceleration and poor ground conditions, you land at roughly **3,000 W of traction power**. That's the target.
 
 Now — how do you deliver that to the ground, across Canadian Shield terrain, with a machine you can actually build in a garage?
 
@@ -99,9 +99,9 @@ Springs and dampers exist to manage energy. When a wheel hits a rock at speed, t
 
 The other reason is that Mars rovers don't carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. RoBug is not going to carry passengers, so vibrations are less of an issue.
 
-## Power: 6 × 1,000 W
+## Power: 6 × 500 W
 
-With six driven wheels, I need each motor to deliver 1,000 W to meet the 6,000 W traction target.
+With six driven wheels, I need each motor to deliver 500 W to meet the 3,000 W traction target.
 
 Six hub motors is a clean fit. No gearboxes, no chains, no sprockets. Each bogie is a self-contained unit with two motor-wheels. I could easily remove each to fit the rover in the back of our car.
 
@@ -121,7 +121,7 @@ To reduce scrub, I'll design RoBug with a **shorter wheelbase relative to its tr
 
 The mechanical concept:
 
-- **6WD, 6 hub motors** — 1,000 W each, 6,000 W total traction power
+- **6WD, 6 hub motors** — 500 W each, 3,000 W total traction power
 - **3-bogie suspension** - all six wheels in constant ground contact, no differential, no springs
 - **Tank steering** — differential drive, no corner servos
 - **Compact L/W ratio** — to keep tank-steer scrub manageable
