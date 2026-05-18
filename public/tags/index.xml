@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on E-Yor Build Log</title>
+    <title>Tags on RoBug Build Log</title>
     <link>https://robug.deaves.net/tags/</link>
-    <description>Recent content in Tags on E-Yor Build Log</description>
+    <description>Recent content in Tags on RoBug Build Log</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate>
@@ -41,41 +41,6 @@
       <link>https://robug.deaves.net/tags/suspension/</link>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
       <guid>https://robug.deaves.net/tags/suspension/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Design</title>
-      <link>https://robug.deaves.net/tags/design/</link>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hoverboard</title>
-      <link>https://robug.deaves.net/tags/hoverboard/</link>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/hoverboard/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OAK-D</title>
-      <link>https://robug.deaves.net/tags/oak-d/</link>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/oak-d/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ROS2</title>
-      <link>https://robug.deaves.net/tags/ros2/</link>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/ros2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>VESC</title>
-      <link>https://robug.deaves.net/tags/vesc/</link>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/vesc/</guid>
       <description></description>
     </item>
     <item>

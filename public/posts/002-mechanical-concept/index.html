@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Entry 002 — Mechanical Concept: Choosing the Drivetrain &middot; E-Yor Build Log</title>
+  <title>Mechanical Concept: Choosing the Drivetrain &middot; RoBug Build Log</title>
   <meta name="description" content="" />
 
   
@@ -42,9 +42,9 @@
   <aside class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://robug.deaves.net/"><h1>E-Yor Build Log</h1></a>
+      <a href="https://robug.deaves.net/"><h1>RoBug Build Log</h1></a>
       <p class="lead">
-       Documenting the build of E-Yor — a smart 4WD electric utility carrier. 
+       Documenting the build of a smart electric utility rover. 
       </p>
     </div>
 
@@ -61,24 +61,23 @@
 
     <main class="content container">
     <div class="post">
-  <h1>Entry 002 — Mechanical Concept: Choosing the Drivetrain</h1>
+  <h1>Mechanical Concept: Choosing the Drivetrain</h1>
   <time datetime=2026-05-18T00:00:00Z class="post-date">Mon, May 18, 2026</time>
   <h2 id="starting-with-the-numbers">Starting with the numbers</h2>
 <p>Before choosing a drivetrain, I needed to know how much power to drive it with.</p>
-<p>E-Yor&rsquo;s specs call for a 250 kg payload capacity. I estimate the unloaded machine will weigh around 200 kg — so all-up loaded mass is <strong>450 kg</strong>. The terrain requirement is a <strong>20% slope</strong> (roughly 11°).</p>
+<p>RoBug&rsquo;s specs call for a 250 kg payload capacity. I estimate the unloaded machine will weigh around 200 kg — so all-up loaded mass is <strong>450 kg</strong>. The terrain requirement is a <strong>20% slope</strong> (roughly 11°).</p>
 <p>Running the numbers on traction power for a wheeled vehicle:</p>
 <pre tabindex="0"><code>F = m × g × sin(θ) + m × g × Crr × cos(θ)
-</code></pre><p>Where rolling resistance coefficient (Crr) for rough terrain is around 0.15. With a 20% slope and some margin for acceleration and poor ground conditions, you land at roughly <strong>3,500 W of traction power</strong>. That&rsquo;s the target.</p>
+</code></pre><p>Where rolling resistance coefficient (Crr) for rough terrain is around 0.15. With a 20% slope and some margin for acceleration and poor ground conditions, you land at roughly <strong>6,000 W of traction power</strong>. That&rsquo;s the target.</p>
 <p>Now — how do you deliver that to the ground, across Canadian Shield terrain, with a machine you can actually build in a garage?</p>
 <h2 id="option-1-tracks">Option 1: Tracks</h2>
-<p>Let&rsquo;s be honest. Tracks look incredible.</p>
-<p><img src="/images/tracked-carrier.jpg" alt="A tracked utility carrier climbing over a log in the woods"></p>
+<p><img src="/images/skid-steer-robot.jpg" alt="A tracked utility carrier climbing over a log in the woods"></p>
 <p>They distribute ground pressure over a large area, provide excellent traction, and handle soft ground far better than wheels. The Ferocarrier I looked at in the first post uses tracks precisely because of this.</p>
 <p>But the problems are real. Building a functional track system from scratch — idlers, drive sprockets, track tensioners, the track itself — is a significant fabrication challenge. And once built, tracks are maintenance-intensive. Mud and debris pack into the drive mechanism. Track links wear and stretch. If something breaks in the field, you&rsquo;re not fixing it with a wrench.</p>
 <p>Tracks are out.</p>
 <h2 id="option-2-fixed-wheel-4wd-skid-steer">Option 2: Fixed-wheel 4WD skid steer</h2>
 <p>The simplest wheeled option: four wheels, each with its own motor, no suspension. Turn by running one side faster than the other — classic skid steer, the same principle used by tanks and countless small robot platforms.</p>
-<p><img src="/images/skid-steer-robot.jpg" alt="A 4WD skid steer wheeled robot — compact, flat, no suspension"></p>
+<p><img src="/images/tracked-carrier.jpg" alt="A 4WD skid steer wheeled robot — compact, flat, no suspension"></p>
 <p>Lots of robot rovers use this successfully. It&rsquo;s cheap, easy to build, and easy to control. The problem is that without suspension on uneven terrain, the rigid frame means statistically only three of the four wheels are in firm contact with the ground at any time. One wheel is always bridging a gap or floating over a rock. On the Canadian Shield, that&rsquo;s most of the time.</p>
 <p>Three-point contact isn&rsquo;t the end of the world, but it limits traction and puts a lot of stress on the frame. I want better than this.</p>
 <h2 id="option-3-atv-style-independent-suspension">Option 3: ATV-style independent suspension</h2>
@@ -96,6 +95,7 @@
 <p>The Mars Rovers.</p>
 <p><img src="/images/nasa-mars-rover.jpg" alt="NASA Mars Exploration Rover — 6-wheeled rocker-bogie suspension"></p>
 <p>Curiosity and Perseverance use a <strong>rocker-bogie suspension</strong> system that keeps all six wheels in constant contact with the ground regardless of terrain. The geometry is elegant: two rockers on either side, connected at a pivot point on the chassis, with a bogie at the rear of each rocker carrying two wheels. The front of each rocker has a single wheel.</p>
+<p><img src="/images/bogie-diagram.png" alt="Rocker-bogie suspension geometry keeping all wheels in contact as the vehicle crosses uneven ground"></p>
 <p>The catch is that pivot point. Because the two rockers pivot independently, there&rsquo;s nothing to constrain the pitch of the chassis relative to the rockers — the chassis would just flop forward or backward. NASA solves this with a differential in the pivot connecting the two rocker shafts. The differential transmits chassis pitch between both sides and provides the third constraint.</p>
 <p>That differential is a precision component. Not something I want to fabricate.</p>
 <h2 id="the-esa-solution-3-bogie-suspension">The ESA solution: 3-bogie suspension</h2>
@@ -110,10 +110,9 @@
 <p>I think it comes down to two things: <strong>speed</strong> and <strong>passengers</strong>.</p>
 <p>Springs and dampers exist to manage energy. When a wheel hits a rock at speed, the spring stores and releases that energy gradually instead of transmitting it as a shock through the chassis. The damper bleeds off the energy so the chassis doesn&rsquo;t bounce. At low speeds, the energy involved is small enough that passive geometry can handle it without dedicated spring elements.</p>
 <p>The other reason is that Mars rovers don&rsquo;t carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. E-Yor carries rocks and firewood. Payload doesn&rsquo;t care.</p>
-<p><img src="/images/bogie-diagram.png" alt="Bogie suspension geometry keeping wheels in contact as the vehicle crosses uneven ground"></p>
 <p>This is the assumption the whole design rests on. E-Yor will move slowly — walking pace or less — and won&rsquo;t have a human on board. I&rsquo;m hoping that means I can get away without springs. The prototype will tell me if I&rsquo;m wrong.</p>
-<h2 id="power-6--550-w">Power: 6 × 550 W</h2>
-<p>With six driven wheels, I need each motor to deliver ~580 W to meet the 3,500 W traction target. A 550 W hub motor per wheel gets me to 3,300 W — close enough, with some headroom from the fact that 3,500 W already includes terrain margin.</p>
+<h2 id="power-6--1000-w">Power: 6 × 1,000 W</h2>
+<p>With six driven wheels, I need each motor to deliver 1,000 W to meet the 6,000 W traction target. A 1,000 W hub motor per wheel gets me exactly there.</p>
 <p>Six hub motors is a clean fit. No gearboxes, no chains, no sprockets. Each bogie is a self-contained unit with two motor-wheels.</p>
 <h2 id="steering-tank-steer-not-corner-servos">Steering: tank steer, not corner servos</h2>
 <p>There&rsquo;s one significant way E-Yor diverges from the NASA/ESA rover design: steering.</p>
@@ -124,7 +123,7 @@
 <h2 id="where-we-are">Where we are</h2>
 <p>The mechanical concept:</p>
 <ul>
-<li><strong>6WD, 6 hub motors</strong> — 550 W each, ~3,300 W total traction power</li>
+<li><strong>6WD, 6 hub motors</strong> — 1,000 W each, 6,000 W total traction power</li>
 <li><strong>3-bogie suspension</strong> (ExoMars-derived) — all six wheels in constant ground contact, no differential, no springs</li>
 <li><strong>Tank steering</strong> — differential drive, no corner servos</li>
 <li><strong>Compact L/W ratio</strong> — to keep tank-steer scrub manageable</li>

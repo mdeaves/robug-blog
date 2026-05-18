@@ -23,7 +23,7 @@ Now — how do you deliver that to the ground, across Canadian Shield terrain, w
 
 ## Option 1: Tracks
 
-![A tracked utility carrier climbing over a log in the woods](/images/tracked-carrier.jpg)
+![A tracked utility carrier climbing over a log in the woods](/images/skid-steer-robot.jpg)
 
 They distribute ground pressure over a large area, provide excellent traction, and handle soft ground far better than wheels. The Ferocarrier I looked at in the first post uses tracks precisely because of this.
 
@@ -35,7 +35,7 @@ Tracks are out.
 
 The simplest wheeled option: four wheels, each with its own motor, no suspension. Turn by running one side faster than the other — classic skid steer, the same principle used by tanks and countless small robot platforms.
 
-![A 4WD skid steer wheeled robot — compact, flat, no suspension](/images/skid-steer-robot.jpg)
+![A 4WD skid steer wheeled robot — compact, flat, no suspension](/images/tracked-carrier.jpg)
 
 Lots of robot rovers use this successfully. It's cheap, easy to build, and easy to control. The problem is that without suspension on uneven terrain, the rigid frame means statistically only three of the four wheels are in firm contact with the ground at any time. One wheel is always bridging a gap or floating over a rock. On the Canadian Shield, that's most of the time.
 
@@ -71,6 +71,8 @@ The Mars Rovers.
 
 Curiosity and Perseverance use a **rocker-bogie suspension** system that keeps all six wheels in constant contact with the ground regardless of terrain. The geometry is elegant: two rockers on either side, connected at a pivot point on the chassis, with a bogie at the rear of each rocker carrying two wheels. The front of each rocker has a single wheel.
 
+![Rocker-bogie suspension geometry keeping all wheels in contact as the vehicle crosses uneven ground](/images/bogie-diagram.png)
+
 The catch is that pivot point. Because the two rockers pivot independently, there's nothing to constrain the pitch of the chassis relative to the rockers — the chassis would just flop forward or backward. NASA solves this with a differential in the pivot connecting the two rocker shafts. The differential transmits chassis pitch between both sides and provides the third constraint.
 
 That differential is a precision component. Not something I want to fabricate.
@@ -99,13 +101,11 @@ Springs and dampers exist to manage energy. When a wheel hits a rock at speed, t
 
 The other reason is that Mars rovers don't carry humans. Suspension on a vehicle with a driver needs to protect the driver from vibration and shock. E-Yor carries rocks and firewood. Payload doesn't care.
 
-![Bogie suspension geometry keeping wheels in contact as the vehicle crosses uneven ground](/images/bogie-diagram.png)
-
 This is the assumption the whole design rests on. E-Yor will move slowly — walking pace or less — and won't have a human on board. I'm hoping that means I can get away without springs. The prototype will tell me if I'm wrong.
 
-## Power: 6 × 550 W
+## Power: 6 × 1,000 W
 
-With six driven wheels, I need each motor to deliver ~580 W to meet the 3,500 W traction target. A 550 W hub motor per wheel gets me to 3,300 W — close enough, with some headroom from the fact that 3,500 W already includes terrain margin.
+With six driven wheels, I need each motor to deliver 1,000 W to meet the 6,000 W traction target. A 1,000 W hub motor per wheel gets me exactly there.
 
 Six hub motors is a clean fit. No gearboxes, no chains, no sprockets. Each bogie is a self-contained unit with two motor-wheels.
 
@@ -125,7 +125,7 @@ To reduce scrub, I'll design E-Yor with a **shorter wheelbase relative to its tr
 
 The mechanical concept:
 
-- **6WD, 6 hub motors** — 550 W each, ~3,300 W total traction power
+- **6WD, 6 hub motors** — 1,000 W each, 6,000 W total traction power
 - **3-bogie suspension** (ExoMars-derived) — all six wheels in constant ground contact, no differential, no springs
 - **Tank steering** — differential drive, no corner servos
 - **Compact L/W ratio** — to keep tank-steer scrub manageable
