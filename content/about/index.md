@@ -22,7 +22,7 @@ Commercial utility carriers exist, but nothing quite hits the combination of pri
 - **250 kg Max. Payload**
 - **10 km/hr Max. Speed**
 - **Handles Rocky Forested Terrain with Ease**
-- **Can Climb 25% Grade Fully Loaded**
+- **Can Climb 20% Grade Fully Loaded**
 - **Capable of Holding Load on a Slope Without Power (Will Not Roll Away)**
 - **Fits in a Model Y Trunk**
 - **5 Hours of Run Time**
