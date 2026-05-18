@@ -9,18 +9,18 @@
     <lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://robug.deaves.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mechanical Concept: Choosing the Drivetrain</title>
-      <link>https://robug.deaves.net/posts/002-mechanical-concept/</link>
-      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/posts/002-mechanical-concept/</guid>
-      <description>Working out the power requirements, then evaluating every drivetrain and suspension concept — from tracks to Mars rovers — before landing on a 6WD rocker-bogie derivative.</description>
-    </item>
-    <item>
       <title>About RoBug</title>
       <link>https://robug.deaves.net/about/</link>
       <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
       <guid>https://robug.deaves.net/about/</guid>
       <description>&lt;h2 id=&#34;what-is-robug&#34;&gt;What is RoBug?&lt;/h2&gt;&#xA;&lt;p&gt;RoBug is a smart electric utility rover I&amp;rsquo;m building for our rural homestead in Ontario. It&amp;rsquo;s designed to haul heavy loads across rough terrain — firewood, tools, building materials — and eventually follow me around the property autonomously, carrying whatever I&amp;rsquo;m working with. I will use it to plow snow, Zamboni the ice on our pond, power tools when I&amp;rsquo;m away from the house, and pull the kids on their toboggans.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mechanical Concept: Choosing the Drivetrain</title>
+      <link>https://robug.deaves.net/posts/002-mechanical-concept/</link>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://robug.deaves.net/posts/002-mechanical-concept/</guid>
+      <description>Working out the power requirements, then evaluating every drivetrain and suspension concept — from tracks to Mars rovers — before landing on a 6WD rocker-bogie derivative.</description>
     </item>
     <item>
       <title>The Problem</title>

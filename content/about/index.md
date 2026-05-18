@@ -2,6 +2,7 @@
 title: "About RoBug"
 date: 2026-05-15
 layout: "single"
+weight: 1
 ---
 
 ## What is RoBug?
