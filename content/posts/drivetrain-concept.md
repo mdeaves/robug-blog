@@ -9,19 +9,19 @@ summary: "Working out the power requirements, then evaluating every drivetrain a
 
 Before choosing a drivetrain, I needed to know how much power to drive it with.
 
-RoBug's specs call for a 250 kg payload capacity. I estimate the unloaded machine will weigh around 200 kg — so all-up loaded mass is **450 kg**. The terrain requirement is a **20% slope** (roughly 11°).
+RoBug's specs call for a 250 kg payload capacity. I estimate the unloaded machine will weigh around 200 kg — so all-up loaded mass is **450 kg**. The terrain requirement is a **20% slope** (roughly 11°). The max speed of the vehicle is 10 km/hr, or 2.8 m/s.
 
 Running the numbers on traction power for a wheeled vehicle:
 
 ```
-F = m × g × sin(θ) + m × g × Crr × cos(θ)
+P = V x [m × g × sin(θ) + m × g × Crr × cos(θ)]
 ```
 
 Where rolling resistance coefficient (Crr) for rough terrain is around 0.15. With a 20% slope and some margin for acceleration and poor ground conditions, you land at roughly **6,000 W of traction power**. That's the target.
 
 Now — how do you deliver that to the ground, across Canadian Shield terrain, with a machine you can actually build in a garage?
 
-## Option 1: Tracks
+## Tracks
 
 ![A tracked utility carrier climbing over a log in the woods](/images/skid-steer-robot.jpg)
 
@@ -31,7 +31,7 @@ But the problems are real. Building a functional track system from scratch — i
 
 Unfortuantely, tracks are out.
 
-## Option 2: Fixed-wheel 4WD skid steer
+## Fixed-wheel 4WD skid steer
 
 The simplest wheeled option: four wheels, each with its own motor, no suspension. Turn by running one side faster than the other — classic skid steer, the same principle used by tanks and countless small robot platforms.
 
@@ -41,7 +41,7 @@ Lots of robot rovers use this successfully. It's cheap, easy to build, and easy 
 
 Three-point contact isn't the end of the world but I think we can do better.
 
-## Option 3: ATV-style independent suspension
+## ATV-style independent suspension
 
 If you want proven off-road performance, look at what ATVs and UTVs do.
 
@@ -51,13 +51,13 @@ Independent suspension at each corner — coilovers, control arms, uprights — 
 
 The problem is the mechanical complexity. Control arms, uprights, bearings, spring perches, shock absorbers — each of these components needs to be sourced or designed and fabricated by me. It's doable for a professional fabricator. For a garage build, it's a substantial scope creep risk. So independent suspesion is out for the same reason as tracks, too complicated.
 
-## Option 4: Rock crawler 4-bar suspension
+## Rock crawler 4-bar suspension
 
 Rock crawlers use a simpler suspension than ATVs — a 4-bar linkage at each corner rather than independent control arms. These vehicles are genuinely impressive off-road.
 
 ![A rock crawler Jeep flexing its suspension over large boulders](/images/rock-crawler.jpg)
 
-The 4-bar is a little simpler to fabricate independent suspension. Rock crawlers need axles to transmit power to the wheels. If I'm going with hub motors — at this point I think they make sense — I don't need axles at all. Surely that frees me up to build something even more capable.
+The 4-bar is a little simpler to fabricate than independent suspension. Rock crawlers need axles to transmit power to the wheels. If I'm going with hub motors — at this point I think they make sense — I don't need axles at all. Surely that frees me up to build something even more capable.
 
 ## Off-road suspension with hub motors
 
@@ -75,7 +75,7 @@ The catch is that pivot point. Because the two rockers pivot independently, ther
 
 ## 3-bogie suspension
 
-Fortunately, people way smarter than have come up with a different approach.
+Fortunately, people way smarter than me have come up with a different approach.
 
 ![ExoMars rover with 3-bogie suspension on Martian terrain](/images/exomars-rover.jpg)
 
@@ -103,13 +103,13 @@ The other reason is that Mars rovers don't carry humans. Suspension on a vehicle
 
 With six driven wheels, I need each motor to deliver 1,000 W to meet the 6,000 W traction target.
 
-Six hub motors is a clean fit. No gearboxes, no chains, no sprockets. Each bogie is a self-contained unit with two motor-wheels.
+Six hub motors is a clean fit. No gearboxes, no chains, no sprockets. Each bogie is a self-contained unit with two motor-wheels. I could easily remove each to fit the rover in the back of our car.
 
 ## Steering: tank steer, not corner servos
 
 There's one significant way RoBug diverges from the NASA/ESA rover design: steering.
 
-Every six-wheeled Mars rover steers by pivoting the corner wheels around their vertical axis — active steering servos in the corner hubs. This gives precise, low-scrub turning. It also means six steering actuators, pivot bearings at each corner, and a steering control system on top of the drive control system.
+Every six-wheeled Mars rover steers by pivoting the corner wheels around their vertical axis — active steering servos in the corner hubs. This gives precise, low-scrub turning. It also means four steering actuators, pivot bearings at each corner, and a steering control system on top of the drive control system.
 
 I'm not building that.
 
