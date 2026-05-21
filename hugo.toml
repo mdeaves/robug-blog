@@ -4,6 +4,9 @@ title = "RoBug Build Log"
 theme = "hyde"
 paginate = 10
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   author = "Michael Deaves"
   description = "Documenting the build of a smart electric utility rover."

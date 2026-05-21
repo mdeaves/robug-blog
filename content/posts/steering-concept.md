@@ -49,6 +49,8 @@ In any case, these problems seem much more solvable than building a full set of 
 
 To test the new concept I built another Lego prototype — you can see it below.
 
-<!-- YOUTUBE VIDEO PLACEHOLDER -->
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe src="https://www.youtube.com/embed/X1Kj9zFLtOA" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
+</div>
 
 However, this model is still lacking in one important way: suspension. That'll be the topic of the next update.
