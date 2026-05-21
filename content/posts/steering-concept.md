@@ -39,11 +39,13 @@ That leaves us with only one other option.
 
 **Articulated steering** — each set of wheels is rigidly connected to their axles or frame members, and the entire vehicle pivots around a center point.
 
-This approach has a number of benefits. The mechanism is simple. It's just a set of bearings bolted onto each half chassis, a shaft connecting them, and an actuator that pushes and pulls control arms to articulate the joint. Because the bearings don't have to be packaged neatly into the wheel hub assembly, they can be really big and beefy. This gives the joint a ton of strength. It seems like something I might actually be able to build too!. As a bonus it also produces a dramatically tighter turning radius. Most vehicles built this way can turn 180 degrees within their own length. This approach has also been successfully used by many heavy lift trucks, bull dozers, road rollers, etc., vehicles that need to be very maneuverable and carry heavy things. Sounds like just what we need.
+This approach has a number of benefits. The mechanism is simple. It's just a set of bearings bolted onto each half chassis, a shaft connecting them, and a linear actuator that pushes and pulls control arms to articulate the joint. This joint is not space or weight constrained, so it can be designed with a ton of strength. It seems like something I might actually be able to build too!. As a bonus it also produces a dramatically tighter turning radius. Most vehicles built this way can turn 180 degrees within their own length. This approach has also been successfully used by many heavy lift trucks, bull dozers, road rollers, etc., vehicles that need to be very maneuverable and carry heavy things. Sounds like just what we need.
+
+One more thing to note is that the robot could be easily disassembled into two halfs by simple removing the center pivot shaft. This might make it easier to fit into the trunk of our car.
 
 ## The Trade-off
 
-The main downside is that articulated steering splits the carrying bed into two pieces that move relative to each other, which could make carrying large items awkward as one of the beds would have to slide relative to the payload to go around a corner. If you've ever been on a bendy bus or street car you know how unsettling this can be. For loose materials like firewood or wood chips we'd probably need two separate bins that can move independently. Although it might be possible to pack the heavy batteries and electronics entirely into one chassis half, freeing up the other half to be used only for payload.
+The main downside is that articulated steering splits the carrying bed into two pieces that move relative to each other, which could make carrying large items awkward as one of the beds would have to slide relative to the payload to go around a corner. If you've ever been on a bendy bus or streetcar you know how unsettling this can be. For loose materials, like firewood or wood chips, we'd probably need two separate bins that can move independently. Although it might be possible to pack the heavy batteries and electronics entirely into one chassis half, freeing up the other half to be used only for payload.
 
 In any case, this problem seems much more solvable than building a full set of steering knuckles and push rods, and we get a much tighter turning circle by default. Whether that turns out to be true or not is yet to be seen.
 
@@ -55,4 +57,4 @@ To test the new concept I built another Lego prototype — you can see it below.
 <iframe src="https://www.youtube.com/embed/X1Kj9zFLtOA" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
 </div>
 
-However, this model is still lacking in one important way: suspension. That'll be the topic of the next update.
+I was impressed by how structural sound the vehicle feels, and by how tight it's turning radius is. However, this model is still lacking in one important way: suspension. That'll be the topic of the next update.
