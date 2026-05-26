@@ -76,10 +76,6 @@ The main challenge with this design is the pivot joint itself. It needs to:
 
 The industry standard is a **3-point articulated pendulum joint**: a spherical plain bearing with a link connecting two points above it. The link locks out pitch while allowing roll. You can see one in action [here](https://www.youtube.com/watch?v=ADfKm_Ml35I).
 
-<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-<iframe src="https://youtu.be/ADfKm_Ml35I?si=tjPwLvLQCyb5e2rX" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
-</div>
-
 For the prototype, I'm planning to build something similar using a trailer hitch ball and a tie rod with heim joints at each end.
 
 But that's a topic for another post.
