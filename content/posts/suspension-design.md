@@ -49,14 +49,14 @@ It also carries the same body roll risk on slopes, and seems expensive and diffi
 
 [![Wacker Neuson DW30](/images/wacker-neuson-dw30.png)](/images/wacker-neuson-dw30.png)
 
-This is the approach used on many articulated machines in mining and construction — the Wacker Neuson DW30 above is a good example. These systems ditch springs and dampers entirely. Instead the pivot connecting the front and rear halves is free to rotate in both the yaw *and* roll axes. This keeps all four wheels in constant ground contact at all times. It's essentially the same idea as the bogie suspension we looked at in an earlier post.
+This is the approach used on many articulated machines in mining and construction — the Wacker Neuson DW30 above is a good example. These systems ditch springs and dampers entirely. Instead the pivot connecting the front and rear halves is free to rotate in both the yaw *and* roll axes. This keeps all four wheels in constant ground contact at all times. It's essentially the same idea as the mars rover bogie suspension we looked at in an earlier post.
 
 The benefits:
 
 - Strong, rigid connection between wheels and chassis — simple, direct load path from payload to ground
 - Plenty of wheel travel, since the full track width acts as the swing arm
-- Good resistance to body roll on slopes — each half of the vehicle can only roll as far as the line between its two tire contact patches, independent of any suspension squish
-- Easy to build, and flexible on motor placement since each half chassis can house its own drivetrain
+- Good resistance to body roll on slopes — each half of the vehicle only rolls as far as the line between its two tire contact patches, it is not exacerbated by any suspension squish
+- Easy to build, and flexible on motor placement since the motors can be mounted in the chassis itself
 
 I've built a Lego prototype of this as well and I'm happy with how it performs — feels sturdy and rolls over bumps easily:
 
@@ -74,7 +74,11 @@ The main challenge with this design is the pivot joint itself. It needs to:
 - Be completely rigid in pitch (this is the only thing controlling the pitch relationship between the two halves)
 - Handle large fore/aft traction forces — for example, front wheels pulling the rear half up over a rock under full load
 
-The industry standard is a **3-point articulated pendulum joint**: a spherical plain bearing with a link connecting two points above it. The link locks out pitch while allowing roll. You can see one in action [here](https://www.youtube.com/watch?v=ADfKm_Ml35I&t=54s).
+The industry standard is a **3-point articulated pendulum joint**: a spherical plain bearing with a link connecting two points above it. The link locks out pitch while allowing roll. You can see one in action [here](https://www.youtube.com/watch?v=ADfKm_Ml35I).
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe src="https://youtu.be/ADfKm_Ml35I?si=tjPwLvLQCyb5e2rX" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
+</div>
 
 For the prototype, I'm planning to build something similar using a trailer hitch ball and a tie rod with heim joints at each end.
 
