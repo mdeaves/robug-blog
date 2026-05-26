@@ -32,7 +32,7 @@ I built a Lego prototype to test this out:
 I wasn't happy with it for a few reasons:
 
 1. Suspension travel is dictated by swing arm length — longer arm means more travel, but also larger moments on the bearings, which makes the wheels wobblier. You can see this in the prototype.
-2. The compliance allows excess body roll when traversing a slope with a high center of gravity. Again, visible in the video.
+2. The compliance allows excess body roll when traversing a slope with a high center of gravity.
 3. It's complicated to build and maintain.
 
 ## Solid Axle Suspension
@@ -64,7 +64,7 @@ I've built a Lego prototype of this as well and I'm happy with how it performs �
 <iframe src="https://www.youtube.com/embed/5fZlBGGoqNE" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
 </div>
 
-If it's so good, why isn't this used on road cars or rock crawlers? Honestly, I'm not 100% sure. My best guess is that without springs, only the tires are absorbing bump energy, which probably isn't enough at highway speeds. It might work fine for a rock crawler, but those need to drive on-road to reach the trail. For RoBug, which tops out around 15 km/h, this isn't a concern — and most of these articulated machines are rated well above that anyway.
+If it's so good, why isn't this used on road cars or rock crawlers? Honestly, I'm not 100% sure. My best guess is that without springs, only the tires are absorbing bump energy, which probably isn't enough at highway speeds. It might work fine for a rock crawler, but those need to drive on-road to reach the trail. For RoBug, which tops out around 15 km/h, this isn't a concern. Most of these articulated machines are rated above 15 km/hr.
 
 ## The Pivot
 
@@ -76,6 +76,6 @@ The main challenge with this design is the pivot joint itself. It needs to:
 
 The industry standard is a **3-point articulated pendulum joint**: a spherical plain bearing with a link connecting two points above it. The link locks out pitch while allowing roll. You can see one in action [here](https://www.youtube.com/watch?v=ADfKm_Ml35I).
 
-For the prototype, I'm planning to build something similar using a trailer hitch ball and a tie rod with heim joints at each end.
+For the prototype, I'll likely build something similar using a trailer hitch ball and a tie rod with heim joints at each end.
 
 But that's a topic for another post.
