@@ -2,7 +2,7 @@
 title: "Hoverboard Motor Control"
 date: 2026-06-09
 tags: ["motors", "arduino", "pid", "prototype", "raspberry-pi"]
-summary: "Using a cheap hoverboard motor and a $25 controller as the drive system for the RoBug prototype, with a PID speed controller running on an Arduino and a live tuning dashboard on the Pi."
+summary: "Testing a cheap hoverboard motor and a $25 controller."
 ---
 
 ## Why hoverboard motors
