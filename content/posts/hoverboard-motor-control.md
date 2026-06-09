@@ -7,33 +7,15 @@ summary: "Using a cheap hoverboard motor and a $25 controller as the drive syste
 
 ## Why hoverboard motors
 
-For the first prototype, I want to test the full navigation and control stack — the software that will eventually run on the real RoBug — without committing to the final hardware. Hoverboard motors are cheap, well-documented, and easy to get. I picked one up off Facebook Marketplace for next to nothing and have been playing around with it for the past week or so.
+For the first prototype, I want to test the full navigation and control stack without committing to the final hardware. Hoverboard motors are cheap, well-documented, and easy to get. I got some off Facebook Marketplace for next to nothing and have been playing around with it for the past week or so.
 
-The goal is simple: accept speed commands from the Raspberry Pi, spin the motor at that speed. Once that works, I can wire up ROS2, test the navigation stack, and figure out what needs fixing before I build the real thing.
+The goal is simple: accept speed commands from the Raspberry Pi, spin the motor at that speed. Once I can command the motor to reliably and accurately spin at a certain speed, then I can plug in the rest of the ROS2 navigation software no problem by running the Pi as a ROS2 node.
 
 ## The motor controller
 
-{{< figure src="https://m.media-amazon.com/images/I/61+IpQ4KQWL._AC_SL1500_.jpg" alt="ZS-X11H hoverboard motor controller" >}}
+I picked up a [ZS-X11H controller from Amazon](https://www.amazon.ca/dp/B087M2378D) for about $25. These are popular in the hoverboard hacking community because they're so cheap and take a standard PWM input — which means an Arduino can drive them directly. The controller handles all the brushless commutation.
 
-I picked up a [ZS-X11H controller from Amazon](https://www.amazon.ca/dp/B087M2378D) for about $25. These are popular in the hoverboard hacking community because they're so cheap and take a standard PWM input — which means an Arduino can drive them directly. The controller handles all the brushless commutation; I just send it a PWM duty cycle and it does the rest.
-
-This video is a good overview of how the whole thing works:
-
-{{< youtube 1E_WDIyZ6Y0 >}}
-
-## Speed control
-
-A raw PWM signal gets you open-loop speed control, which is fine on a bench but useless on a robot. Load changes — terrain, slope, payload — will throw the speed off and the controller has no way to compensate. I need closed-loop control, which means a PID controller.
-
-The hoverboard motor has hall effect sensors that output a pulse train as the motor spins. I use an interrupt on the Arduino to measure the time between pulses and convert that to RPM. The PID loop runs at 50Hz and adjusts the PWM output to hold the target speed.
-
-The control architecture is feedforward + PID correction. The feedforward term uses the motor's KV rating to calculate a baseline PWM for a given target RPM, and the PID trims the error on top of that. This means the PID only has to correct small residual errors rather than doing all the work, which keeps the gains small and the response clean.
-
-Direction control uses the ZS-X11H's DIR input pin. When a direction change is requested, the controller ramps speed down to zero first, flips the direction pin, then ramps back up — so there's no hard reversal shock to the motor.
-
-## The tuning dashboard
-
-To tune the PID gains without reflashing the Arduino every time, I built a small Flask app that runs on the Raspberry Pi. It reads the Arduino's serial output and streams it to a browser over SSE. There are sliders for target RPM and the three PID gains, two live charts (RPM/setpoint and PWM/correction), and all changes send serial commands back to the Arduino in real time.
+Here is a video explaining how to wire the controller and set-up the PID control loop.
 
 {{< youtube 1E_WDIyZ6Y0 >}}
 
@@ -400,7 +382,3 @@ if __name__ == '__main__':
 ```
 
 </details>
-
-## Where we are
-
-The motor accepts speed commands over serial, runs closed-loop at 50Hz, and handles direction changes smoothly. Next up is wiring this into ROS2 so the Pi can drive it from the navigation stack.
