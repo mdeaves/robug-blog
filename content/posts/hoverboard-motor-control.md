@@ -7,9 +7,9 @@ summary: "Using a cheap hoverboard motor and a $25 controller as the drive syste
 
 ## Why hoverboard motors
 
-For the first prototype, I want to test the full navigation and control stack without committing to the final hardware. Hoverboard motors are cheap, well-documented, and easy to get. I got some off Facebook Marketplace for next to nothing and have been playing around with it for the past week or so.
+For the first prototype, I want to test the full navigation and control stack without committing to the final hardware. Hoverboard motors are cheap, well-documented, and easy to get. I got some off Facebook Marketplace for next to nothing and have been playing around with one of them for the past week or so.
 
-The goal is simple: accept speed commands from the Raspberry Pi, spin the motor at that speed. Once I can command the motor to reliably and accurately spin at a certain speed, then I can plug in the rest of the ROS2 navigation software no problem by running the Pi as a ROS2 node.
+The goal is simple: accept speed commands from the Raspberry Pi, spin the motor at that speed. Once I can command the motor to reliably and accurately spin at a given speed, then I can plug in the rest of the ROS2 navigation stack by running the Pi as a ROS2 node.
 
 ## The motor controller
 
@@ -382,3 +382,7 @@ if __name__ == '__main__':
 ```
 
 </details>
+
+## Next Steps
+
+Now I'm confident I can control the motors from the Pi, I guess the next step is to design the prototype chassis and build the thing.
