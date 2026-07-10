@@ -33,14 +33,12 @@ Now we can cut the robot in half at the joint and just look at the rear of the r
 
 ![Rear Half Free Body Diagram](/images/rear-half-fbd.svg)
 
-The top ball joint is connected by a link to the top joint on the front half of the robot. This link has ball joints at both ends and so can only transfer loads along its length. In the case that the rear COG is ahead of the rear wheel, this link will be in compression, here denoted $F_L$. To balance the forces in the x direction, the bottom joint must see an equal and opposite x force, $F_{J,x}$. This bottom joint can apply a force in the y direction because it is rigidly connected to the rear chassis, just like how a trailer hitch has tongue weight that will compress your car's suspension system. Here that vertical force is denoted $F_{J,y}$. $F_r$ is the rear wheel reaction force and is unchanged from the analysis above.
+The top ball joint is connected by a link to the top joint on the front half of the robot. This link has ball joints at both ends and so can only transfer loads along its length, here denoted $F_L$. To balance the forces in the x direction, the bottom joint must see an equal and opposite x force, $F_{J,x}$. This bottom joint can apply a vertical force because it is rigidly connected to the rear chassis, just like how a trailer hitch has tongue weight that will compress your car's suspension system. Here that vertical force is denoted $F_{J,y}$. $F_r$ is the rear wheel reaction force and is unchanged from the analysis above.
 
-So we have,
+Balancing forces in x and y, and summing moments around the lower ball joint gives three equations. Solving each for the unknown joint force:
 
-$$F_L = F_{J,x}$$
+$$F_L = \frac{F_r \cdot L_r - W_r(L_r - X_r)}{h}$$
+
+$$F_{J,x} = F_L$$
 
 $$F_{J,y} = W_r - F_r$$
-
-We can sum the moments around the lower ball joint to get,
-
-$$F_r \cdot L_r = W_r \cdot (L_r - X_r) + F_L \cdot h$$
