@@ -48,3 +48,23 @@ There is a nice special case worth noting. When $X_f = L$ — that is, the front
 $$F_r = \frac{W_r(L - X_r)}{L}$$
 
 The front weight $W_f$ has dropped out entirely. Since $F_L$, $F_{J,x}$, and $F_{J,y}$ all depend only on $F_r$ and the rear section geometry, it follows that **all joint forces become independent of the front weight** when the front COG sits directly above the front axle. The front section is perfectly balanced on its own wheel and transfers nothing through the joint — it could be twice as heavy and the joint wouldn't know.
+
+## Numerical Example
+
+Plugging in the RoBug prototype dimensions with $W_r = 500$ N and the front COG over the front axle ($X_f = L$):
+
+| Parameter | Value |
+|-----------|-------|
+| $W_r$ | 500 N |
+| $L$ | 0.65 m |
+| $X_r$ | 0.15 m |
+| $L_r$ | 0.45 m |
+| $h$ | 0.10 m |
+
+| Force | Value |
+|-------|-------|
+| $F_r$ (rear wheel reaction) | 385 N |
+| $F_L$ (link compression) | 231 N |
+| $F_{J,x}$ (joint horizontal) | 231 N |
+| $F_{J,y}$ (joint vertical) | 115 N |
+| Resultant at lower joint | 258 N |
