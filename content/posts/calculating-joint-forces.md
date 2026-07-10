@@ -43,7 +43,7 @@ $$F_{J,x} = F_L$$
 
 $$F_{J,y} = W_r - F_r$$
 
-There is a nice special case worth noting. When $X_f = L$ — that is, the front section's centre of gravity is directly above the front wheel — the term $W_f(L - X_f)$ in the full vehicle moment equation goes to zero. This means $F_r$ simplifies to:
+There is a nice special case worth noting. When $X_f = L$ the front section's centre of gravity is directly above the front wheel — the term $W_f(L - X_f)$ in the full vehicle moment equation goes to zero. This means $F_r$ simplifies to:
 
 $$F_r = \frac{W_r(L - X_r)}{L}$$
 
