@@ -42,3 +42,9 @@ $$F_L = \frac{F_r \cdot L_r - W_r(L_r - X_r)}{h}$$
 $$F_{J,x} = F_L$$
 
 $$F_{J,y} = W_r - F_r$$
+
+There is a nice special case worth noting. When $X_f = L$ — that is, the front section's centre of gravity is directly above the front wheel — the term $W_f(L - X_f)$ in the full vehicle moment equation goes to zero. This means $F_r$ simplifies to:
+
+$$F_r = \frac{W_r(L - X_r)}{L}$$
+
+The front weight $W_f$ has dropped out entirely. Since $F_L$, $F_{J,x}$, and $F_{J,y}$ all depend only on $F_r$ and the rear section geometry, it follows that **all joint forces become independent of the front weight** when the front COG sits directly above the front axle. The front section is perfectly balanced on its own wheel and transfers nothing through the joint — it could be twice as heavy and the joint wouldn't know.
