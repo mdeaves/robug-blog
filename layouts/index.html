@@ -5,11 +5,6 @@
 <div class="sticky-posts">
   <p class="sticky-label">About this project</p>
   <article class="post post-card sticky-card">
-    {{ if $about.Params.thumbnail }}
-    <a href="{{ $about.Permalink }}" class="post-thumb-link">
-      <img src="{{ $about.Params.thumbnail }}" alt="{{ $about.Title }}" class="post-thumb">
-    </a>
-    {{ end }}
     <div class="post-card-body">
       <h1 class="post-title">
         <a href="{{ $about.Permalink }}">{{ $about.Title }}</a>
@@ -21,7 +16,7 @@
 {{ end }}
 
 <div class="posts">
-{{ range .Site.RegularPages.ByDate.Reverse -}}
+{{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
 <article class="post post-card">
   {{ if .Params.thumbnail }}
   <a href="{{ .Permalink }}" class="post-thumb-link">
