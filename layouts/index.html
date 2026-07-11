@@ -19,7 +19,7 @@
 <article class="post post-card">
   {{ if .Params.thumbnail }}
   <a href="{{ .Permalink }}" class="post-thumb-link">
-    <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="post-thumb">
+    <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="post-thumb{{ if .Params.thumbnail_contain }} post-thumb--contain{{ end }}">
   </a>
   {{ end }}
   <div class="post-card-body">

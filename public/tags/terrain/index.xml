@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terrain on RoBug Build Log</title>
-    <link>https://robug.deaves.net/tags/terrain/</link>
+    <link>http://192.168.4.28:1313/tags/terrain/</link>
     <description>Recent content in Terrain on RoBug Build Log</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://robug.deaves.net/tags/terrain/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://192.168.4.28:1313/tags/terrain/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Problem</title>
-      <link>https://robug.deaves.net/posts/000-the-problem/</link>
+      <link>http://192.168.4.28:1313/posts/000-the-problem/</link>
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/posts/000-the-problem/</guid>
+      <guid>http://192.168.4.28:1313/posts/000-the-problem/</guid>
       <description>Our rural Ontario property is beautiful, rocky, and exhausting to work on. This is why RoBug needs to exist.</description>
     </item>
   </channel>

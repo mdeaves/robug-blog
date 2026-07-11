@@ -2,66 +2,171 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on RoBug Build Log</title>
-    <link>https://robug.deaves.net/tags/</link>
+    <link>http://192.168.4.28:1313/tags/</link>
     <description>Recent content in Tags on RoBug Build Log</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://robug.deaves.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://192.168.4.28:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Drivetrain</title>
-      <link>https://robug.deaves.net/tags/drivetrain/</link>
-      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/drivetrain/</guid>
+      <title>Analysis</title>
+      <link>http://192.168.4.28:1313/tags/analysis/</link>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/analysis/</guid>
       <description></description>
     </item>
     <item>
-      <title>Hub Motors</title>
-      <link>https://robug.deaves.net/tags/hub-motors/</link>
-      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/hub-motors/</guid>
+      <title>Articulation</title>
+      <link>http://192.168.4.28:1313/tags/articulation/</link>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/articulation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>http://192.168.4.28:1313/tags/design/</link>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Structural</title>
+      <link>http://192.168.4.28:1313/tags/structural/</link>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/structural/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prototype</title>
+      <link>http://192.168.4.28:1313/tags/prototype/</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/prototype/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sheet Metal</title>
+      <link>http://192.168.4.28:1313/tags/sheet-metal/</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/sheet-metal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bed</title>
+      <link>http://192.168.4.28:1313/tags/bed/</link>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/bed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fusion360</title>
+      <link>http://192.168.4.28:1313/tags/fusion360/</link>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/fusion360/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arduino</title>
+      <link>http://192.168.4.28:1313/tags/arduino/</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/arduino/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Motors</title>
+      <link>http://192.168.4.28:1313/tags/motors/</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/motors/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pid</title>
+      <link>http://192.168.4.28:1313/tags/pid/</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/pid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Raspberry-Pi</title>
+      <link>http://192.168.4.28:1313/tags/raspberry-pi/</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Articulated</title>
+      <link>http://192.168.4.28:1313/tags/articulated/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/articulated/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lego</title>
+      <link>http://192.168.4.28:1313/tags/lego/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/lego/</guid>
       <description></description>
     </item>
     <item>
       <title>Mechanical</title>
-      <link>https://robug.deaves.net/tags/mechanical/</link>
-      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/mechanical/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rover</title>
-      <link>https://robug.deaves.net/tags/rover/</link>
-      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/rover/</guid>
+      <link>http://192.168.4.28:1313/tags/mechanical/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/mechanical/</guid>
       <description></description>
     </item>
     <item>
       <title>Suspension</title>
-      <link>https://robug.deaves.net/tags/suspension/</link>
+      <link>http://192.168.4.28:1313/tags/suspension/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/suspension/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rover</title>
+      <link>http://192.168.4.28:1313/tags/rover/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/rover/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Steering</title>
+      <link>http://192.168.4.28:1313/tags/steering/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/steering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drivetrain</title>
+      <link>http://192.168.4.28:1313/tags/drivetrain/</link>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/suspension/</guid>
+      <guid>http://192.168.4.28:1313/tags/drivetrain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hub Motors</title>
+      <link>http://192.168.4.28:1313/tags/hub-motors/</link>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/tags/hub-motors/</guid>
       <description></description>
     </item>
     <item>
       <title>Concept</title>
-      <link>https://robug.deaves.net/tags/concept/</link>
+      <link>http://192.168.4.28:1313/tags/concept/</link>
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/concept/</guid>
+      <guid>http://192.168.4.28:1313/tags/concept/</guid>
       <description></description>
     </item>
     <item>
       <title>Property</title>
-      <link>https://robug.deaves.net/tags/property/</link>
+      <link>http://192.168.4.28:1313/tags/property/</link>
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/property/</guid>
+      <guid>http://192.168.4.28:1313/tags/property/</guid>
       <description></description>
     </item>
     <item>
       <title>Terrain</title>
-      <link>https://robug.deaves.net/tags/terrain/</link>
+      <link>http://192.168.4.28:1313/tags/terrain/</link>
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/tags/terrain/</guid>
+      <guid>http://192.168.4.28:1313/tags/terrain/</guid>
       <description></description>
     </item>
   </channel>

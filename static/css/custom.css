@@ -49,6 +49,12 @@
   margin-top: 0.4rem;
 }
 
+.post-thumb--contain {
+  object-fit: contain;
+  background: #fff;
+  padding: 4px;
+}
+
 @media (max-width: 600px) {
   .post-card {
     flex-direction: column;

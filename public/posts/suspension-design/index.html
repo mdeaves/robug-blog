@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.161.1">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Suspension Design &middot; RoBug Build Log</title>
+  <meta name="description" content="" />
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/print.css"
+    media="print" />
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/hyde-bundle.css"
+    media="all" />  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]});"></script>
+
+  
+</head>
+
+  <link rel="stylesheet" href="/css/custom.css">
+  <body class="theme-base-custom ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://192.168.4.28:1313/"><h1>RoBug Build Log</h1></a>
+      <p class="lead">
+       Documenting the build of a smart electric utility rover. 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://192.168.4.28:1313/">Home</a> </li>
+        <li><a href="/posts/"> Posts </a></li><li><a href="/about/"> About </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2026. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Suspension Design</h1>
+  <time datetime=2026-05-26T00:00:00Z class="post-date">Tue, May 26, 2026</time>
+  <p>After landing on an articulated steering architecture, it&rsquo;s time to figure out the best suspension design for RoBug — if we even need one at all.</p>
+<p>The goals for the suspension system are:</p>
+<ol>
+<li>Distribute the vehicle&rsquo;s weight to all wheels as evenly as possible to maximize traction</li>
+<li>Allow for 12&quot; of wheel travel</li>
+<li>Provide a robust load path between the payload and the ground, minimizing chassis twisting or bending</li>
+<li>Maintain the pitch and roll attitude of the vehicle within acceptable limits on slopes</li>
+<li>Be reasonably easy to build</li>
+</ol>
+<p>Three designs were considered: independent wheel suspension, solid axle suspension, and a dual-axis articulated pivot.</p>
+<h2 id="independent-suspension">Independent Suspension</h2>
+<p><a href="/images/independent-suspension.jpg"><img src="/images/independent-suspension.jpg" alt="Independent suspension kit"></a></p>
+<p>This allows each wheel to move completely independently. Each wheel gets its own swing arm, spring, and spindle. The simplest arrangement would be something like the trailer suspension kits shown above, modified to mount the hub motors.</p>
+<p>I built a Lego prototype to test this out:</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe src="https://www.youtube.com/embed/DfMCKbVxWEI" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
+</div>
+<p>I wasn&rsquo;t happy with it for a few reasons:</p>
+<ol>
+<li>Suspension travel is dictated by swing arm length — longer arm means more travel, but also larger moments on the bearings, which makes the wheels wobblier. You can see this in the prototype.</li>
+<li>The compliance allows excess body roll when traversing a slope with a high center of gravity.</li>
+<li>It&rsquo;s complicated to build and maintain.</li>
+</ol>
+<h2 id="solid-axle-suspension">Solid Axle Suspension</h2>
+<p><a href="/images/solid-axle-crawler.jpg"><img src="/images/solid-axle-crawler.jpg" alt="Rock crawler solid axle"></a></p>
+<p>This connects the front and rear wheels with solid axles suspended to the chassis via a 4-bar linkage, similar to a rock crawler.</p>
+<p>After watching a lot of RC rock crawler videos, I&rsquo;m convinced this is more structurally sound than independent suspension — the axle just adds a lot of rigidity. The problem is that getting large suspension travel requires a long swing arm running fore/aft along the vehicle. In our case, the middle of the vehicle is already occupied by the steering pivot, so there&rsquo;s not much room. We could extend the wheelbase, but that hurts maneuverability and moves the payload further inboard, increasing the bending moment on the pivot.</p>
+<p>It also carries the same body roll risk on slopes, and seems expensive and difficult to build.</p>
+<h2 id="articulated-pendulum-joint">Articulated Pendulum Joint</h2>
+<p><a href="/images/wacker-neuson-dw30.png"><img src="/images/wacker-neuson-dw30.png" alt="Wacker Neuson DW30"></a></p>
+<p>This is the approach used on many articulated machines in mining and construction — the Wacker Neuson DW30 above is a good example. These systems ditch springs and dampers entirely. Instead the pivot connecting the front and rear halves is free to rotate in both the yaw <em>and</em> roll axes. This keeps all four wheels in constant ground contact at all times. It&rsquo;s essentially the same idea as the mars rover bogie suspension we looked at in an earlier post.</p>
+<p>The benefits:</p>
+<ul>
+<li>Strong, rigid connection between wheels and chassis — simple, direct load path from payload to ground</li>
+<li>Plenty of wheel travel, since the full track width acts as the swing arm</li>
+<li>Good resistance to body roll on slopes — each half of the vehicle only rolls as far as the line between its two tire contact patches, it is not exacerbated by any suspension squish</li>
+<li>Easy to build, and flexible on motor placement since the motors can be mounted in the chassis itself</li>
+</ul>
+<p>I&rsquo;ve built a Lego prototype of this as well and I&rsquo;m happy with how it performs — feels sturdy and rolls over bumps easily:</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe src="https://www.youtube.com/embed/5fZlBGGoqNE" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
+</div>
+<p>If it&rsquo;s so good, why isn&rsquo;t this used on road cars or rock crawlers? Honestly, I&rsquo;m not 100% sure. My best guess is that without springs, only the tires are absorbing bump energy, which probably isn&rsquo;t enough at highway speeds. It might work fine for a rock crawler, but those need to drive on-road to reach the trail. For RoBug, which tops out around 15 km/h, this isn&rsquo;t a concern. Most of these articulated machines are rated above 15 km/hr.</p>
+<h2 id="the-pivot">The Pivot</h2>
+<p>The main challenge with this design is the pivot joint itself. It needs to:</p>
+<ul>
+<li>Rotate freely in yaw and roll</li>
+<li>Be completely rigid in pitch (this is the only thing controlling the pitch relationship between the two halves)</li>
+<li>Handle large fore/aft traction forces — for example, front wheels pulling the rear half up over a rock under full load</li>
+</ul>
+<p>The industry standard is a <strong>3-point articulated pendulum joint</strong>: a spherical plain bearing with a link connecting two points above it. The link locks out pitch while allowing roll. You can see one in action <a href="https://www.youtube.com/watch?v=ADfKm_Ml35I">here</a>.</p>
+<p>For the prototype, I&rsquo;ll likely build something similar using a trailer hitch ball and a tie rod with heim joints at each end.</p>
+<p>But that&rsquo;s a topic for another post.</p>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>

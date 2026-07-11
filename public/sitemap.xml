@@ -2,48 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://robug.deaves.net/about/</loc>
+    <loc>http://192.168.4.28:1313/about/</loc>
     <lastmod>2026-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robug.deaves.net/tags/drivetrain/</loc>
+    <loc>http://192.168.4.28:1313/tags/analysis/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/articulation/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/posts/calculating-joint-forces/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/design/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/posts/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/structural/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/prototype/</loc>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/sheet-metal/</loc>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/posts/sheet-metal-prototype-design/</loc>
+    <lastmod>2026-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/bed/</loc>
+    <lastmod>2026-06-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/posts/articulating-bed-design/</loc>
+    <lastmod>2026-06-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/posts/articulation-joint-model/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/fusion360/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/arduino/</loc>
+    <lastmod>2026-06-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/posts/hoverboard-motor-control/</loc>
+    <lastmod>2026-06-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/motors/</loc>
+    <lastmod>2026-06-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/pid/</loc>
+    <lastmod>2026-06-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/raspberry-pi/</loc>
+    <lastmod>2026-06-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/articulated/</loc>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/lego/</loc>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/mechanical/</loc>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/suspension/</loc>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/posts/suspension-design/</loc>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/posts/steering-concept/</loc>
+    <lastmod>2026-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/rover/</loc>
+    <lastmod>2026-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/steering/</loc>
+    <lastmod>2026-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.4.28:1313/tags/drivetrain/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robug.deaves.net/posts/drivetrain-concept/</loc>
+    <loc>http://192.168.4.28:1313/posts/drivetrain-concept/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robug.deaves.net/tags/hub-motors/</loc>
+    <loc>http://192.168.4.28:1313/tags/hub-motors/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robug.deaves.net/tags/mechanical/</loc>
-    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://robug.deaves.net/posts/</loc>
-    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://robug.deaves.net/</loc>
-    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://robug.deaves.net/tags/rover/</loc>
-    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://robug.deaves.net/tags/suspension/</loc>
-    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://robug.deaves.net/tags/</loc>
-    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://robug.deaves.net/tags/concept/</loc>
+    <loc>http://192.168.4.28:1313/tags/concept/</loc>
     <lastmod>2026-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robug.deaves.net/tags/property/</loc>
+    <loc>http://192.168.4.28:1313/tags/property/</loc>
     <lastmod>2026-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robug.deaves.net/tags/terrain/</loc>
+    <loc>http://192.168.4.28:1313/tags/terrain/</loc>
     <lastmod>2026-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robug.deaves.net/posts/000-the-problem/</loc>
+    <loc>http://192.168.4.28:1313/posts/000-the-problem/</loc>
     <lastmod>2026-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://robug.deaves.net/categories/</loc>
+    <loc>http://192.168.4.28:1313/categories/</loc>
   </url>
 </urlset>

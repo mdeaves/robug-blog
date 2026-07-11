@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Design on E-Yor Build Log</title>
-    <link>https://robug.deaves.net/tags/design/</link>
-    <description>Recent content in Design on E-Yor Build Log</description>
+    <title>Design on RoBug Build Log</title>
+    <link>http://192.168.4.28:1313/tags/design/</link>
+    <description>Recent content in Design on RoBug Build Log</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://robug.deaves.net/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://192.168.4.28:1313/tags/design/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Entry 001 — Concept, Design Decisions, and the Software Stack</title>
-      <link>https://robug.deaves.net/posts/001-concept-and-design/</link>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://robug.deaves.net/posts/001-concept-and-design/</guid>
-      <description>The origin of E-Yor, the hardware and software architecture decisions, and why I&amp;rsquo;m building a prototype called RoBug before committing to the full build.</description>
+      <title>Calculating Joint Forces</title>
+      <link>http://192.168.4.28:1313/posts/calculating-joint-forces/</link>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/posts/calculating-joint-forces/</guid>
+      <description>Working out the forces on RoBug&amp;rsquo;s central articulation joint using free body diagrams.</description>
+    </item>
+    <item>
+      <title>Sheet Metal Prototype Design</title>
+      <link>http://192.168.4.28:1313/posts/sheet-metal-prototype-design/</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/posts/sheet-metal-prototype-design/</guid>
+      <description>The RoBug prototype design is coming along, built around sheet metal fabrication.</description>
+    </item>
+    <item>
+      <title>Challenges of an Articulating Bed Design</title>
+      <link>http://192.168.4.28:1313/posts/articulating-bed-design/</link>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/posts/articulating-bed-design/</guid>
+      <description>Designing a well supported bed for an articulating vehicle presents some unique challenges.</description>
+    </item>
+    <item>
+      <title>Articulation Joint Model</title>
+      <link>http://192.168.4.28:1313/posts/articulation-joint-model/</link>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/posts/articulation-joint-model/</guid>
+      <description>Building a Fusion 360 model of the RoBug articulation joint to understand how it works.</description>
     </item>
   </channel>
 </rss>

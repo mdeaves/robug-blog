@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.161.1">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rethinking the Architecture &middot; RoBug Build Log</title>
+  <meta name="description" content="" />
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/print.css"
+    media="print" />
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/hyde-bundle.css"
+    media="all" />  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]});"></script>
+
+  
+</head>
+
+  <link rel="stylesheet" href="/css/custom.css">
+  <body class="theme-base-custom ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://192.168.4.28:1313/"><h1>RoBug Build Log</h1></a>
+      <p class="lead">
+       Documenting the build of a smart electric utility rover. 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://192.168.4.28:1313/">Home</a> </li>
+        <li><a href="/posts/"> Posts </a></li><li><a href="/about/"> About </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2026. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Rethinking the Architecture</h1>
+  <time datetime=2026-05-21T00:00:00Z class="post-date">Thu, May 21, 2026</time>
+  <p>The last few days have really been about refining the requirements, and properly investigating whether the skid-steered mars rover concept is actually workable.</p>
+<h2 id="the-lego-prototype">The Lego Prototype</h2>
+<p>I built a number of Lego prototypes, and I found it was a challenge to build the mars rover type vehicle with any sort of rigidity. I also discovered that 6 year old boys are incredible at rooting out any structural problems your design might have. The main issue is that the bogie legs attach to the chassis at one concentrated pivot point. That pivot has to handle all the forces from the wheels acting on it from a distance, producing large twisting moments that are hard to control.</p>
+<p>During my research I came across the <a href="https://newscrewdriver.com/category/projects/sawppy-the-rover/">Sawppy</a> project — an open source mars rover that many <a href="https://newscrewdriver.com/category/projects/sawppy-the-rover/">people</a> have built and tested. These projects are incredible, and well done to anyone who has built a functional rover. However, what&rsquo;s clear from these projects is that these rovers are not exactly beefy machines designed to carry a lot of weight. You can see what I mean <a href="https://newscrewdriver.com/2021/03/05/sawppy-rover-dances-like-real-rovers/">here</a>.</p>
+<p>This makes a lot of sense in the context of something you&rsquo;re sending to Mars, where every kilogram of payload has been relentlessly optimized. In our case of carrying heavy things around on our homestead, I don&rsquo;t think this architecture is up to the challenge.</p>
+<h2 id="tank-steering-is-out-too">Tank Steering is Out Too</h2>
+<p>The other thing learned from the Lego prototype — as well as from watching many videos of tank turn robots, skid steers, UGVs, and other vehicles — is that while technically possible, tank steering is incredibly jerky, bumpy, hard to control, tough on tires, introduces large bending moments on the structure of the robot, and generally just a less optimal way to get a robot oriented the way you need. This is especially true over rough and rocky terrain, where you might be asking a wheel to magically hop sideways over a rock in order for the vehicle to turn.</p>
+<p>I fully anticipate having enough problems controlling the robot autonomously as it is — somehow programming the controller to account for the messiness of a tank turn is going to be too much to ask of my almost non-existent control, autonomous navigation, and coding skills.</p>
+<p>So unfortunately tank steering is out.</p>
+<p>Which means that we are basically back to the drawing board.</p>
+<h2 id="so-what-do-we-do">So What Do We Do?</h2>
+<p>As I see it there are really only three ways to steer a robot that might actually work:</p>
+<p><strong>Tank steer</strong> — ruled out above.</p>
+<p><strong>Conventional steering</strong> — front, rear, or both sets of wheels rotate about a near vertical axis, like on a road car. This would require a steering knuckle for each wheel we want to steer, complicates the suspension design, introduces a number of new failure modes, and unless we repeat that effort front and rear (no thanks), doesn&rsquo;t give us much of a turning radius. The lack of turning radius might come back and bite us when I&rsquo;m doing Austin Powers-style 10-point turns trying to unload the firewood behind our house. Mainly because of the mechanical complexity involved, I think this approach is out.</p>
+<p><img src="/images/austin-powers.gif" alt="Austin Powers 10-point turn"></p>
+<p>That leaves us with only one other option.</p>
+<p><strong>Articulated steering</strong> — each set of wheels is rigidly connected to their axles or frame members, and the entire vehicle pivots around a center point.</p>
+<p>This approach has a number of benefits. The mechanism is simple. It&rsquo;s just a set of bearings bolted onto each half chassis, a shaft connecting them, and a linear actuator that pushes and pulls control arms to articulate the joint. This joint is not space or weight constrained, so it can be designed with a ton of strength. It seems like something I might actually be able to build too!. As a bonus it also produces a dramatically tighter turning radius. Most vehicles built this way can turn 180 degrees within their own length. This approach has also been successfully used by many heavy lift trucks, bull dozers, road rollers, etc., vehicles that need to be very maneuverable and carry heavy things. Sounds like just what we need.</p>
+<p>One more thing to note is that the robot could be easily disassembled into two halfs by simple removing the center pivot shaft. This might make it easier to fit into the trunk of our car.</p>
+<h2 id="the-trade-off">The Trade-off</h2>
+<p>The main downside is that articulated steering splits the carrying bed into two pieces that move relative to each other, which could make carrying large items awkward as one of the beds would have to slide relative to the payload to go around a corner. If you&rsquo;ve ever been on a bendy bus or streetcar you know how unsettling this can be. For loose materials, like firewood or wood chips, we&rsquo;d probably need two separate bins that can move independently. Although it might be possible to pack the heavy batteries and electronics entirely into one chassis half, freeing up the other half to be used only for payload.</p>
+<p>In any case, this problem seems much more solvable than building a full set of steering knuckles and push rods, and we get a much tighter turning circle by default. Whether that turns out to be true or not is yet to be seen.</p>
+<h2 id="the-new-lego-prototype">The New Lego Prototype</h2>
+<p>To test the new concept I built another Lego prototype — you can see it below.</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe src="https://www.youtube.com/embed/X1Kj9zFLtOA" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
+</div>
+<p>I was impressed by how structural sound the vehicle feels, and by how tight it&rsquo;s turning radius is. However, this model is still lacking in one important way: suspension. That&rsquo;ll be the topic of the next update.</p>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>

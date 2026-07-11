@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sheet Metal on RoBug Build Log</title>
+    <link>http://192.168.4.28:1313/tags/sheet-metal/</link>
+    <description>Recent content in Sheet Metal on RoBug Build Log</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://192.168.4.28:1313/tags/sheet-metal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sheet Metal Prototype Design</title>
+      <link>http://192.168.4.28:1313/posts/sheet-metal-prototype-design/</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://192.168.4.28:1313/posts/sheet-metal-prototype-design/</guid>
+      <description>The RoBug prototype design is coming along, built around sheet metal fabrication.</description>
+    </item>
+  </channel>
+</rss>
