@@ -1,6 +1,29 @@
 {{ define "main" -}}
+
+{{ $sticky := where .Site.RegularPages "Params.sticky" true }}
+{{ if $sticky }}
+<div class="sticky-posts">
+  <p class="sticky-label">About this project</p>
+  {{ range $sticky }}
+  <article class="post post-card sticky-card">
+    {{ if .Params.thumbnail }}
+    <a href="{{ .Permalink }}" class="post-thumb-link">
+      <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="post-thumb">
+    </a>
+    {{ end }}
+    <div class="post-card-body">
+      <h1 class="post-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
+      <p class="post-summary">{{ .Params.summary }}</p>
+    </div>
+  </article>
+  {{ end }}
+</div>
+{{ end }}
+
 <div class="posts">
-{{ range .Site.RegularPages.ByDate.Reverse -}}
+{{ range (where .Site.RegularPages "Params.sticky" "!=" true).ByDate.Reverse -}}
 <article class="post post-card">
   {{ if .Params.thumbnail }}
   <a href="{{ .Permalink }}" class="post-thumb-link">

@@ -58,3 +58,27 @@
     height: 180px;
   }
 }
+
+/* Sticky / featured post */
+.sticky-posts {
+  background: #f4f7f3;
+  border-left: 4px solid #2d5a27;
+  border-radius: 4px;
+  padding: 1rem 1.2rem 0.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.sticky-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2d5a27;
+  margin: 0 0 0.8rem;
+}
+
+.sticky-card {
+  border-bottom: none;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0;
+}

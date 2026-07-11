@@ -4,6 +4,7 @@ date: 2026-05-12
 tags: ["property", "terrain", "concept"]
 summary: "Our rural Ontario property is beautiful, rocky, and exhausting to work on. This is why RoBug needs to exist."
 thumbnail: /images/terrain-1.jpg
+sticky: true
 ---
 
 Our family has property in Ontario on the Canadian Shield. If you've spent time in this part of the country you know what that means: exposed bedrock, uneven ground, steep slopes, trees growing straight out of solid rock, and leaf or snow covered terrain that hides everything underneath.
