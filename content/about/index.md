@@ -3,6 +3,7 @@ title: "About RoBug"
 date: 2026-05-15
 layout: "single"
 weight: 1
+thumbnail: /images/wacker-neuson-dw30.png
 ---
 
 RoBug is a smart electric utility rover I'm building for our rural homestead in Ontario. It's designed to haul heavy loads across rough terrain — firewood, tools, building materials — and eventually follow me around the property autonomously, carrying whatever I'm working with. I will use it to plow snow, Zamboni the ice on our pond, power tools when I'm away from the house, and pull the kids on their toboggans.
