@@ -3,6 +3,7 @@ title: "Hoverboard Motor Control"
 date: 2026-06-09
 tags: ["motors", "arduino", "pid", "prototype", "raspberry-pi"]
 summary: "Testing a cheap hoverboard motor and a $25 controller."
+thumbnail: https://img.youtube.com/vi/1E_WDIyZ6Y0/hqdefault.jpg
 ---
 
 ## Why hoverboard motors

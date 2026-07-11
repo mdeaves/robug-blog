@@ -3,6 +3,7 @@ title: "Rethinking the Architecture"
 date: 2026-05-21
 tags: ["mechanical", "steering", "articulated", "rover", "lego"]
 summary: "The skid-steered mars rover concept turns out to have two fatal flaws — structural rigidity and steering. Here's how I worked through both."
+thumbnail: https://img.youtube.com/vi/X1Kj9zFLtOA/hqdefault.jpg
 ---
 
 The last few days have really been about refining the requirements, and properly investigating whether the skid-steered mars rover concept is actually workable.

@@ -1,0 +1,20 @@
+{{ define "main" -}}
+<div class="posts">
+{{ range .Site.RegularPages.ByDate.Reverse -}}
+<article class="post post-card">
+  {{ if .Params.thumbnail }}
+  <a href="{{ .Permalink }}" class="post-thumb-link">
+    <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="post-thumb">
+  </a>
+  {{ end }}
+  <div class="post-card-body">
+    <h1 class="post-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h1>
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}" class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+    <p class="post-summary">{{ .Params.summary }}</p>
+  </div>
+</article>
+{{- end }}
+</div>
+{{- end }}

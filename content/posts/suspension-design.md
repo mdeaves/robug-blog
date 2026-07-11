@@ -3,6 +3,7 @@ title: "Suspension Design"
 date: 2026-05-26
 tags: ["mechanical", "suspension", "articulated", "lego"]
 summary: "Three suspension designs were considered for RoBug. Here's how I worked through them and what I landed on."
+thumbnail: /images/independent-suspension.jpg
 ---
 
 After landing on an articulated steering architecture, it's time to figure out the best suspension design for RoBug — if we even need one at all.
