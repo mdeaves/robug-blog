@@ -3,8 +3,7 @@
 {{ $about := site.GetPage "/about" }}
 {{ if $about }}
 <div class="sticky-posts">
-  <p class="sticky-label">About this project</p>
-  <article class="post post-card sticky-card">
+<article class="post post-card sticky-card">
     <div class="post-card-body">
       <h1 class="post-title">
         <a href="{{ $about.Permalink }}">{{ $about.Title }}</a>
